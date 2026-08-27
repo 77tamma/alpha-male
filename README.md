@@ -96,3 +96,48 @@ inside the product module and the offer at the foot — and both must agree. The
 Modern evergreen browsers. The page uses CSS custom properties, `clamp()`, `mask-image`,
 `aspect-ratio` and `IntersectionObserver`. It honours `prefers-reduced-motion`: the scrub is
 disabled, loops stop, and every reveal resolves to its final state.
+
+---
+
+## Handing this to a developer
+
+Everything needed to continue the work is in this repo. There is no build step and no
+package to install — clone it, serve `site/`, and edit `site/index.html`.
+
+```bash
+git clone https://github.com/77tamma/alpha-male.git
+cd alpha-male/site && python -m http.server 8000
+```
+
+**Where things are.** `site/index.html` is the entire site — markup, styles and script in
+one file, in that order. `site/assets/` holds the video and photography it references.
+`assets-in/` holds the originals those were cut from, including the print label artwork.
+`DESIGN-PACKAGE.md` is the brief the page was built against and explains why the copy says
+what it says.
+
+**How the page is verified.** `review/` holds the scripts used to check every claim made
+about this page. They drive headless Chrome over the CDP and measure the real composited
+result rather than reading the CSS back:
+
+| Script | What it proves |
+|---|---|
+| `cdp.cjs` | the shared driver the rest use — connect, evaluate, screenshot, resize |
+| `guarleg3.cjs` | text contrast against the *lightest pixel* behind it, sampled across the smoke loop |
+| `mobaudit.cjs` | per-section phone audit: overflow, whether each scroll variable actually moves |
+| `mobhidden.cjs` | finds elements sitting on screen at opacity 0 — the bug class that hid the buy box |
+| `compare.cjs` | desktop vs phone element-by-element: what disappears, what changes size |
+| `clicktest.cjs` | clicks a control with a real dispatched mouse event, not `.click()` |
+| `build-preview.cjs` | builds the single-file `preview.html` with every asset inlined |
+
+Start Chrome with `--remote-debugging-port=9222` first, serve the site, then run a script
+with `node review/<name>.cjs`.
+
+Two of those exist because of mistakes worth not repeating. `clicktest.cjs` dispatches a
+real mouse event because a JS `.click()` ignores `pointer-events:none` — it passed on a
+button no human could press. `guarleg3.cjs` swaps the `<video>` for a `<canvas>` holding the
+same frame, because Chrome's screenshot API does not composite video layers, so the first
+version of that test reported a false pass on every element.
+
+**Two known gaps**, both listed at the top of this README: `BUY_URL` is empty so no button
+can take an order, and the ingredient declaration and "Made in the USA" line need review
+against what can actually be documented.
