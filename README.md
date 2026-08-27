@@ -2,7 +2,9 @@
 
 A single-page site for Alpha Male, a 10 mL roll-on attraction cologne for men.
 
-**Live:** https://77tamma.github.io/alpha-male/
+**Live:** not published yet — the repo is private and GitHub Pages needs a public repo
+(free) or GitHub Pro. See .github/workflows/deploy.yml for the two ways to turn it on.
+Until then, run it locally with the two commands under "Running it locally".
 
 The whole page is one continuous scroll-driven film. Three sections pin the viewport and
 drive a video's `currentTime` from scroll position, so the reader scrubs the footage rather

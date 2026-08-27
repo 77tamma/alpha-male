@@ -1,10 +1,25 @@
-# Publishes site/ to GitHub Pages on every push to main.
-# The contents of site/ become the site root, so index.html serves at the repo URL.
+# Publishes site/ to GitHub Pages. The contents of site/ become the site root, so
+# index.html serves at the repo URL.
+#
+# CURRENTLY MANUAL-ONLY, ON PURPOSE.
+# GitHub Pages is not available for a private repository on the free plan, so an
+# automatic run on every push would fail and send a failure email each time. Two ways
+# to turn it back on:
+#
+#   1. Make the repo public — Pages is free there:
+#        gh repo edit 77tamma/alpha-male --visibility public --accept-visibility-change-consequences
+#      Note this also publishes assets-in/ (including the print label artwork) and
+#      DESIGN-PACKAGE.md. Move those out first if that matters.
+#
+#   2. Or upgrade to GitHub Pro (~$4/mo), which allows Pages on private repos.
+#
+# Then restore automatic deploys by uncommenting the push trigger below, and set
+# Settings → Pages → Source to "GitHub Actions".
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 permissions:
