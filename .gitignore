@@ -19,3 +19,8 @@ desktop.ini
 *.swp
 .vscode/
 .idea/
+
+# Kept in the private repo 77tamma/alpha-male-assets — this repo is public.
+# Press-resolution label artwork and the internal design brief.
+*FOR PRINT.pdf
+DESIGN-PACKAGE.md
