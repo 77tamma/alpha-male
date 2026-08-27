@@ -1,0 +1,2592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alpha Male, Attraction Cologne for Men</title>
+<meta name="description" content="Set the tone before you say a word. Alpha Male is a 10ml roll-on attraction cologne for men — a bold masculine fragrance made for men who carry themselves differently.">
+<meta name="theme-color" content="#0A0708">
+<meta property="og:title" content="Alpha Male, Attraction Cologne for Men">
+<meta property="og:description" content="Set the tone before you say a word. The right presence never needs an introduction.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://77tamma.github.io/alpha-male/">
+<meta property="og:image" content="https://77tamma.github.io/alpha-male/assets/hero-ending.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="The Alpha Male 10ml roll-on cologne bottle, lit red through smoke.">
+<meta property="og:site_name" content="Alpha Male">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alpha Male, Attraction Cologne for Men">
+<meta name="twitter:description" content="Set the tone before you say a word. The right presence never needs an introduction.">
+<meta name="twitter:image" content="https://77tamma.github.io/alpha-male/assets/hero-ending.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0708'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='42' font-weight='700' fill='%23ED1C24' text-anchor='middle'%3E%CE%B1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@500&family=Manrope:wght@400;500;700&display=swap">
+<style>
+/* ============================================================ TOKENS */
+:root{
+  --canvas:#0A0708;
+  --canvas-deep:#060405;
+  --panel:#151011;
+  --panel-2:#1B1517;
+  --panel-line:#2A2022;
+  --border-strong:#4A3B3E;
+
+  --accent:#ED1C24;
+  --accent-hover:#FF3A41;
+  --accent-muted:rgba(237,28,36,.22);
+  --accent-glow:rgba(237,28,36,.55);
+
+  --text-primary:#F4EFEB;
+  --text-secondary:#B4A8AC;
+  --text-dim:#6E6467;
+
+  --display:'Archivo Black',Georgia,serif;
+  --body:'Manrope',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+
+  --tshadow:0 1px 2px rgba(5,5,10,.95),0 3px 12px rgba(5,5,10,.78),0 10px 44px rgba(5,5,10,.8);
+
+  --hero-vh:580;
+  --gut:clamp(20px,5vw,72px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden;overflow-x:clip}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--canvas);color:var(--text-primary);
+  font-family:var(--body);font-weight:400;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--accent);color:#fff;padding:12px 18px;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ============================================ FIXED ENVIRONMENT LAYER */
+.env{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.env__video{position:absolute;top:50%;left:50%;min-width:120%;min-height:120%;
+  transform:translate(-50%,-50%);opacity:0;transition:opacity 1.6s var(--ease);filter:saturate(1.1)}
+.env.on .env__video{opacity:.30}
+/* ducked while the guarantee is running the same clip at its own scale */
+body.guar-lock .env.on .env__video{opacity:.04}
+.env__wash{position:absolute;inset:0;
+  background:radial-gradient(ellipse 90% 70% at 50% 0%,rgba(237,28,36,.10) 0%,rgba(237,28,36,0) 60%),
+             linear-gradient(180deg,rgba(10,7,8,.55) 0%,rgba(10,7,8,.88) 55%,rgba(10,7,8,.97) 100%)}
+.env__grain{position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ======================================================== EMBER MOTES */
+.motes{position:fixed;inset:0;z-index:1;pointer-events:none}
+.mote{position:absolute;width:3px;height:3px;border-radius:50%;
+  background:var(--accent);opacity:0;filter:blur(.5px)}
+.motes.on .mote{animation:rise 22s linear infinite}
+@keyframes rise{
+  0%{transform:translateY(20vh) scale(.5);opacity:0}
+  12%{opacity:.5}
+  88%{opacity:.35}
+  100%{transform:translateY(-105vh) scale(1.1);opacity:0}
+}
+
+/* ================================================================ NAV */
+/* the promise rides the nav row rather than a strip of its own — it is a nav item that
+   happens to be a fact rather than a link */
+/* the payoff line of a headline, in the brand's own red */
+.hit{color:var(--accent)}
+
+/* twice the size of everything else in the bar — it is the one fact in there that changes
+   a decision, so it is not a footnote */
+.ship{display:inline-flex;align-items:center;gap:10px;margin:0;
+  font-family:var(--mono);font-weight:500;font-size:22px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--text-primary);white-space:nowrap}
+.ship b{color:var(--accent);font-weight:500}
+.ship__i{width:32px;height:auto;flex:none;color:var(--accent)}
+.ship--foot{color:var(--text-primary)}
+/* the footer row centres as one line and wraps as a block rather than orphaning a link */
+.foot__links--with-ship{display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:center;gap:14px clamp(16px,2vw,28px)}
+@media (max-width:900px){
+  .foot__links--with-ship{gap:12px 18px}
+  .ship--foot{flex-basis:100%;justify-content:center}
+}
+@media (max-width:900px){
+  .ship{font-size:20px;letter-spacing:.06em;gap:9px}
+  .ship__i{width:25px}
+  nav.nav{padding:12px 14px}
+  .nav .nav__logo{height:20px;width:auto}
+  .nav .ship{min-width:0}
+  .ship>span{overflow:hidden;text-overflow:ellipsis}
+  .nav__right{gap:11px}
+  .nav__right .nav__link{white-space:nowrap;font-size:10px;letter-spacing:.1em}
+}
+.ship__over{font-style:normal}
+@media (max-width:400px){
+  nav.nav{padding:11px 12px;gap:9px;flex-wrap:wrap}
+  .nav .nav__logo{height:17px}
+  .ship{font-size:18px;letter-spacing:.04em;gap:8px}
+  .ship__i{width:22px}
+  .nav__right{gap:9px}
+  .nav__right .nav__link{font-size:9.4px;letter-spacing:.06em}
+}
+@media (min-width:641px) and (max-width:1280px){.nav .ship{display:none}}
+/* At double size the promise cannot share a phone's nav row with a logo, four links and a
+   CTA — it takes a strip of its own directly above them, which is also what makes it the
+   first thing read. */
+@media (max-width:900px){
+  /* one row: mark, promise, menu. The links live in a panel under it. */
+  nav.nav{display:grid;grid-template-columns:1fr auto;grid-template-areas:"ship ship" "brand burger";align-items:center;gap:0;padding:0;
+    background:linear-gradient(180deg,rgba(6,4,5,.97),rgba(6,4,5,.88))}
+  nav.nav .nav__burger{display:flex;grid-area:burger;justify-self:end;margin-right:8px}
+  nav.nav .ship{grid-area:ship;justify-self:stretch;justify-content:center;
+    padding:11px 12px;background:var(--panel);border-bottom:1px solid var(--panel-line)}
+  nav.nav .nav__brand{grid-area:brand;justify-self:start;margin:9px 0 9px 13px}
+
+  nav.nav .nav__right{grid-column:1/-1;justify-self:stretch;
+    position:absolute;top:100%;left:0;right:0;z-index:1;
+    display:flex;flex-direction:column;align-items:stretch;gap:0;
+    background:var(--panel);border-top:1px solid var(--panel-line);
+    max-height:0;overflow:hidden;visibility:hidden;
+    transition:max-height .4s var(--ease),visibility 0s linear .4s}
+  nav.nav.open .nav__right{max-height:70vh;visibility:visible;transition-delay:0s}
+  nav.nav .nav__right .nav__link{display:block;padding:15px 18px;font-size:12.5px;
+    letter-spacing:.16em;border-bottom:1px solid var(--panel-line)}
+  nav.nav .nav__right .nav__link.hide-s{display:block}
+  nav.nav .nav__right .nav__link:last-child{border-bottom:0}
+}
+
+/* three children, so the promise lands in the middle instead of beside the logo */
+.nav__brand{flex:none;display:flex}
+.nav__burger{display:none;flex:none;width:38px;height:38px;padding:9px 7px;
+  background:none;border:0;cursor:pointer;flex-direction:column;justify-content:space-between}
+.nav__burger span{display:block;height:2px;background:var(--text-primary);border-radius:2px;
+  transition:transform .3s var(--ease),opacity .2s var(--ease)}
+.nav.open .nav__burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.open .nav__burger span:nth-child(2){opacity:0}
+.nav.open .nav__burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(14px,2vw,30px);
+  padding:16px var(--gut);
+  background:linear-gradient(180deg,rgba(6,4,5,.92),rgba(6,4,5,0));
+  transition:background .5s var(--ease),backdrop-filter .5s var(--ease)}
+.nav.solid{background:rgba(6,4,5,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--panel-line)}
+.nav>a{flex:none;display:flex;min-width:0}
+.nav__logo{height:30px;width:auto;flex:none;max-width:none}
+.nav .ship{justify-self:center}
+.nav__right{justify-self:end}
+.nav__brand{justify-self:start}
+.nav__right{display:flex;align-items:center;gap:22px}
+.nav__link{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-secondary);text-decoration:none;transition:color .35s var(--ease)}
+.nav__link:hover{color:var(--text-primary)}
+@media (max-width:640px){.nav__link.hide-s{display:none}}
+
+/* ============================================================= BUTTON */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--body);font-weight:700;font-size:15px;letter-spacing:.01em;
+  padding:15px 28px;border-radius:2px;border:1px solid var(--accent);
+  background:var(--accent);color:#fff;text-decoration:none;cursor:pointer;
+  overflow:hidden;isolation:isolate;
+  transition:background .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease),box-shadow .5s var(--ease);
+  text-shadow:none}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;
+  background:radial-gradient(ellipse 60% 140% at 50% 120%,rgba(255,255,255,.45),rgba(255,255,255,0) 70%);
+  transition:opacity .5s var(--ease)}
+.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover);transform:translateY(-2px);
+  box-shadow:0 10px 34px rgba(237,28,36,.34)}
+.btn:hover::before{opacity:1}
+.btn--ghost{background:transparent;color:var(--text-primary);border-color:var(--border-strong)}
+.btn--ghost:hover{background:rgba(237,28,36,.10);border-color:var(--accent);color:#fff;box-shadow:none}
+@media (pointer:coarse){.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}}
+
+/* =============================================================== HERO */
+.hero{position:relative;z-index:2;height:calc(var(--hero-vh) * 1vh)}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--canvas-deep)}
+.stage__media{position:absolute;inset:0}
+.poster{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1s var(--ease)}
+.poster.in{opacity:1}
+#hero{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .9s var(--ease);will-change:transform;transform:translateZ(0)}
+.stage.video-ready #hero{opacity:1}
+.stage.video-ready .poster{opacity:0}
+
+/* The film is 16:9. On any screen WIDER than 16:9, `cover` scales the video up by
+   width and crops the top and bottom, which slices the cap and base off the bottle.
+   Measured: 360px lost at 2560x1080, 495px at 3440x1440. Beyond 16:9 we fit the whole
+   frame instead. At exactly 16:9 contain and cover are identical, so nothing changes
+   on ordinary screens, and the video's own edges are near-black so the sides blend
+   into the canvas rather than reading as bars. */
+@media (min-aspect-ratio: 16/9){
+  #hero{object-fit:contain;background:var(--canvas-deep)}
+  .poster{background-size:contain;background-repeat:no-repeat;background-color:var(--canvas-deep)}
+}
+
+.scrim{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(8,5,6,0) 32%,rgba(8,5,6,.66) 100%)}
+.vig{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(6,4,5,.72) 0%,rgba(6,4,5,0) 22%,rgba(6,4,5,0) 74%,rgba(6,4,5,.80) 100%)}
+
+/* loading ring */
+.ring{position:absolute;bottom:34px;left:50%;transform:translateX(-50%) rotate(-90deg);
+  width:34px;height:34px;color:var(--accent);opacity:.85;transition:opacity .5s var(--ease)}
+.stage.video-ready .ring{opacity:0}
+.chev{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  width:22px;height:34px;color:var(--text-dim);opacity:.7}
+.chev svg{animation:bob 2.8s var(--ease) infinite;animation-delay:-.6s}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(6px);opacity:.9}}
+
+/* ------------------------------------------------------- caption bands */
+.bands{position:absolute;inset:0;pointer-events:none}
+/* the band layer is click-through so caption text never intercepts hero scroll — but the
+   button inside it has to be reachable */
+.settle-cta,.settle-cta .btn{pointer-events:auto}
+.band{position:absolute;inset:0;opacity:0;display:flex;align-items:center;
+  padding:0 var(--gut);text-shadow:var(--tshadow)}
+/* the centre column is the action lane the product occupies; the side columns
+   are wider because the bottle is narrow in frame. Measured against the footage. */
+/* Cap the width so the flanking copy stays composed around the product on ultrawide
+   screens instead of being flung to the far edges. */
+.band__inner{position:relative;z-index:2;max-width:1800px;width:100%;margin-inline:auto;
+  display:grid;grid-template-columns:1.42fr .46fr 1.42fr;align-items:center;gap:0}
+.band--left .band__col{grid-column:1;justify-self:start;text-align:left}
+.band--right .band__col{grid-column:3;justify-self:end;text-align:right}
+.band__col{max-width:none}
+
+/* per-band scrim, anchored to the band's own column, centre lane untouched */
+.band::before{content:"";position:absolute;top:0;bottom:0;width:52%;pointer-events:none;
+  opacity:calc(.28 + .72*var(--k,1))}
+/* the accent kicker is #ED1C24, which cannot exceed 4.79:1 even on pure black —
+   so this band's scrim has to work harder than the rest to keep it readable */
+.band--left::before{left:-6%;
+  background:radial-gradient(ellipse 70% 62% at 42% 50%,rgba(5,4,6,.93) 0%,rgba(5,4,6,.72) 46%,rgba(5,4,6,0) 78%)}
+.band--right::before{right:-6%;
+  background:radial-gradient(ellipse 68% 60% at 58% 50%,rgba(5,4,6,.86) 0%,rgba(5,4,6,.62) 46%,rgba(5,4,6,0) 76%)}
+/* bands whose frames carry bright light through the text column need a linear
+   scrim, not a radial: it covers the column evenly and still dies out before
+   the centre lane, so the product stays bright. Measured, not guessed. */
+.band--deep::before{width:62%;left:-6%;
+  background:linear-gradient(90deg,rgba(4,3,5,.95) 0%,rgba(4,3,5,.92) 46%,rgba(4,3,5,.55) 74%,rgba(4,3,5,0) 100%)}
+
+/* the settle band splits: headline left, spec right, product lane clear */
+/* deeper than the other bands but pulled in narrower, so the extra darkness lands on
+   the text columns and dies well before the bottle's edge. The settle frame is the
+   brightest in the film — the red pool under the product reaches both columns. */
+.band--split::before{left:-6%;width:48%;
+  background:linear-gradient(90deg,rgba(4,3,5,.985) 0%,rgba(4,3,5,.955) 42%,rgba(4,3,5,.76) 72%,rgba(4,3,5,0) 100%)}
+.band--split::after{content:"";position:absolute;top:0;bottom:0;right:-6%;width:41%;pointer-events:none;
+  opacity:calc(.28 + .72*var(--k,1));
+  background:linear-gradient(270deg,rgba(4,3,5,.975) 0%,rgba(4,3,5,.94) 42%,rgba(4,3,5,.70) 72%,rgba(4,3,5,0) 100%)}
+
+.kicker{font-family:var(--mono);font-weight:500;font-size:clamp(12.5px,1.15vw,17px);
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.kicker svg{width:clamp(14px,1.2vw,18px);height:auto;flex:none}
+.band--right .kicker{justify-content:flex-end}
+.kicker svg{flex:none}
+
+.band h1,.band h2{font-family:var(--display);font-weight:400;margin:0;
+  font-size:clamp(28px,3.3vw,54px);line-height:1.04;letter-spacing:-.018em;
+  text-wrap:pretty}
+.band .sub{margin:22px 0 0;font-size:clamp(19px,1.8vw,27px);color:var(--text-secondary);
+  max-width:32ch;line-height:1.45}
+.band--right .sub{margin-left:auto}
+.band .em{color:var(--accent)}
+
+/* text choreography primitives (transform + opacity only) */
+.w{display:inline-block;white-space:pre}
+.c{display:inline-block;will-change:transform,opacity}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* (a) blur-to-sharp */
+.e-blur{position:relative;display:inline-block}
+.e-blur .soft{position:absolute;inset:0;filter:blur(11px);opacity:calc(1 - var(--k,0))}
+.e-blur .sharp{opacity:var(--k,0)}
+
+/* (f) drift-down */
+.e-drift .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc)) * -26px))}
+
+/* (g) approach-from-depth */
+.e-depth{--kc:clamp(0,var(--k,0)*1.6,1);opacity:var(--kc);
+  transform:scale(calc(.84 + .16*var(--kc)));transform-origin:left center}
+.band--right .e-depth{transform-origin:right center}
+
+/* (e) staged settle */
+/* the settle leads with the real wordmark artwork. Typesetting it in Archivo Black
+   got the letterforms wrong — the logo's A, E and alpha are all custom. */
+.settle-logo{display:block;width:clamp(210px,23vw,375px);height:auto;
+  margin-bottom:clamp(26px,3vw,44px);
+  opacity:var(--kl,0);transform:translateY(calc((1 - var(--kl,0)) * 20px))}
+/* Title Case here, not the caps the other bands use — it sits directly under a
+   wordmark that is already all caps, and two caps blocks stacked read as one. */
+.band h2.settle-head{text-transform:none;text-wrap:balance;letter-spacing:-.015em;
+  opacity:var(--kh,0);transform:translateY(calc((1 - var(--kh,0)) * 16px))}
+.settle-sub{opacity:var(--ks,0);transform:translateY(calc((1 - var(--ks,0)) * 14px))}
+.settle-cta{opacity:var(--kb,0);transform:translateY(calc((1 - var(--kb,0)) * 14px))}
+
+/* THE THREE-BEAT PROMISE — right column of the settle.
+   Set LEFT inside a right-set block. Right-aligning it put the em dashes and the phrase
+   start-points at three different x positions, because FIRST/THEN/AFTER are three
+   different widths; the rag read as a mistake rather than a choice. The label now sits
+   directly above its phrase in the same column instead of beside it.
+   Rules, not a stripe: an asymmetric thick accent edge is a recognisable tell, so the
+   structure comes from hairlines with a single accent hairline opening the block. */
+.spec{list-style:none;margin:0 0 0 auto;padding:0;
+  width:max-content;max-width:min(340px,100%);text-align:left}
+.spec li{padding:clamp(15px,1.6vw,21px) 0;border-top:1px solid var(--panel-line);
+  /* One entrance, staggered off the single scrub variable. No timers and no intersection
+     observer: anything with its own clock drifts against a scrubbed video. */
+  --i:0;
+  --kd:clamp(0,(var(--ks,0) - var(--i)*.13)*2.6,1);
+  opacity:var(--kd);transform:translate3d(0,calc((1 - var(--kd)) * 12px),0)}
+.spec li:nth-child(2){--i:1}
+.spec li:nth-child(3){--i:2}
+.spec li:first-child{border-top-color:var(--accent)}
+.spec li:last-child{border-bottom:1px solid var(--panel-line)}
+/* Red is a rule here and never a word: #ED1C24 measures 2.32:1 on the brightest smoke
+   behind this column, and its luminance caps it at 4.79:1 even on pure black. */
+.spec__step{display:block;font-family:var(--mono);font-weight:500;
+  font-size:clamp(10px,.82vw,12px);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--text-secondary);margin-bottom:9px}
+.spec__line{display:block;font-size:clamp(17px,1.55vw,23px);line-height:1.3;
+  color:var(--text-primary)}
+
+/* ==================================================== STATIC HERO MODE */
+.static-hero{display:none}
+@media (max-width:720px),
+       (orientation:portrait) and (max-width:1024px),
+       (orientation:portrait) and (pointer:coarse),
+       (orientation:landscape) and (pointer:coarse) and (max-height:560px),
+       (prefers-reduced-motion:reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:auto;min-height:100svh;display:flex;align-items:flex-end}
+  .stage__media,.bands,.ring,.chev{display:none}
+  /* phones get a purpose-built portrait frame: product high, words in clean dark */
+  /* the product gets a frame of its own and the words sit under it. Padding the copy down
+     over a background image meant the bottle was always behind the headline. */
+  .static-hero{display:block;position:relative;z-index:2;width:100%;
+    padding:0 0 clamp(34px,9vw,54px);background:var(--canvas)}
+  /* the photo is 900x1600 — a 9/16 frame shows all of it, cap to reflection */
+  .static-hero{padding-top:94px}
+  .static-hero::before{content:"";display:block;width:100%;aspect-ratio:9/16;
+    background:
+      linear-gradient(180deg,rgba(6,4,5,.2) 0%,rgba(6,4,5,0) 18%,
+                     rgba(6,4,5,0) 66%,rgba(6,4,5,.85) 92%,var(--canvas) 100%),
+      url('assets/hero-portrait.jpg') 50% 50%/cover no-repeat}
+  .static-hero>*{margin-inline:var(--gut)}
+  .static-hero .kicker{margin-top:clamp(22px,6vw,34px)}
+  /* the desktop hero tells four things across its scrub; the phone tells the same four
+     down the page, so nothing in the story is lost to the smaller screen */
+  .sh__beat{margin:clamp(30px,8vw,46px) var(--gut) 0;padding-top:clamp(22px,6vw,32px);
+    border-top:1px solid var(--panel-line)}
+  .sh__beat h2{font-family:var(--display);font-weight:400;margin:0;
+    font-size:clamp(26px,7.2vw,34px);line-height:1.06;letter-spacing:-.02em}
+  .sh__beat .sub{margin:12px 0 0;max-width:38ch}
+  .sh__beat--settle{border-top-color:var(--accent)}
+  .sh__spec{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:11px}
+  .sh__spec li{display:flex;gap:12px;align-items:baseline;
+    font-size:15px;color:var(--text-primary)}
+  .sh__spec span{font-family:var(--mono);font-size:10px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--accent);min-width:44px}
+  .static-hero .btn{margin-top:clamp(28px,7vw,40px)}
+  .static-hero h1{font-family:var(--display);font-weight:400;margin:0;
+    line-height:1.05;letter-spacing:-.005em;
+    text-transform:uppercase;text-shadow:var(--tshadow)}
+  .static-hero .sub{margin:18px 0 28px;color:var(--text-secondary);max-width:34ch;
+    text-shadow:var(--tshadow)}
+}
+@media (max-height:560px){.chev,.ring{display:none}}
+
+/* ============================================================ SECTIONS */
+main{position:relative;z-index:2}
+.sec{position:relative;padding:clamp(84px,11vw,150px) var(--gut)}
+/* Matches the pinned modules: they cap at 1800px then pad by --gut, so their copy starts
+   at a content box of (1800 - 2*gut) centred. .sec has already applied the gutter, so the
+   same content box here puts the reviews on the same left edge as the scent and mechanism
+   modules above. Measured: at 1920 both begin at x=132, previously 132 vs 370. */
+.wrap{max-width:calc(1800px - var(--gut) * 2);margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 18px;display:flex;align-items:center;gap:9px}
+h2.h{font-family:var(--display);font-weight:400;margin:0;
+  font-size:clamp(28px,3.6vw,48px);line-height:1.08;letter-spacing:-.015em}
+h3{font-family:var(--display);font-weight:400;margin:0;font-size:clamp(18px,1.5vw,22px);
+  line-height:1.2;letter-spacing:-.01em}
+p.lede{font-size:clamp(16px,1.3vw,19px);color:var(--text-secondary);max-width:60ch;line-height:1.65;margin:20px 0 0}
+p{margin:16px 0 0}
+
+/* entrances */
+.rise{opacity:0;transform:translateY(26px);
+  transition:opacity .9s var(--ease-out),transform .9s var(--ease-out)}
+.in .rise,.rise.in{opacity:1;transform:none}
+.stg>*{opacity:0;transform:translateY(22px);
+  transition:opacity .85s var(--ease-out),transform .85s var(--ease-out)}
+.stg.in>*{opacity:1;transform:none}
+.stg.in>*:nth-child(1){transition-delay:0ms}
+.stg.in>*:nth-child(2){transition-delay:110ms}
+.stg.in>*:nth-child(3){transition-delay:220ms}
+.stg.in>*:nth-child(4){transition-delay:330ms}
+.stg.done>*:nth-child(1),.stg.done>*:nth-child(2),
+.stg.done>*:nth-child(3),.stg.done>*:nth-child(4){transition-delay:0s !important}
+
+/* --------------------------------------------------- product section
+   A tall track with a sticky pin: the frame holds while the track scrolls past it,
+   which buys a beat of held attention without hijacking the scrollbar. Progress
+   through the track is published as --t (0..1) and everything inside spends it. */
+.track{position:relative;height:210vh}
+.pin{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--canvas)}
+/* Whisper level, and kept off the product. The photograph carries its own room —
+   its own key light, contact shadow and floor reflection — so running a second,
+   unrelated smoke scene behind it puts two rooms in one frame, which is the thing
+   that read as fake. The loop is atmosphere on the copy side only. */
+.bed{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:.46;transform:scale(1.06);
+  /* the hole keeps the product's own room clean; everywhere else the loop can read */
+  -webkit-mask-image:radial-gradient(54% 70% at 75% 52%,transparent 0%,transparent 32%,#000 74%);
+  mask-image:radial-gradient(54% 70% at 75% 52%,transparent 0%,transparent 32%,#000 74%)}
+.bed__veil{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(180deg,var(--canvas) 0%,rgba(10,7,8,0) 22%,rgba(10,7,8,0) 74%,var(--canvas) 100%)}
+/* the photograph is capped at 470px, so the copy can take the wider track — and it
+   needs it: each claim has to hold one line */
+.pin__inner{position:relative;height:100%;max-width:1800px;margin-inline:auto;
+  padding:0 var(--gut);display:grid;grid-template-columns:1.24fr .76fr;
+  gap:clamp(30px,4vw,56px);align-items:center}
+.pin__copy .h{font-size:clamp(25px,3.05vw,40px)}
+
+/* the offer, in the module rather than only at the foot of the page */
+
+/* The loop is deliberately visible now, and it drifts — so the worst background under
+   any given line changes through the cycle. Rather than dimming the smoke back down,
+   the copy carries its own soft ground: feathered well past the text so it never reads
+   as a panel, and shaped to the column so the open areas stay bright. */
+.pin__copy{position:relative;z-index:2}
+.pin__copy::before{content:"";position:absolute;pointer-events:none;z-index:-1;
+  inset:-14% -22% -16% -34%;
+  background:radial-gradient(72% 62% at 38% 50%,
+    rgba(10,7,8,.93) 0%,rgba(10,7,8,.86) 42%,rgba(10,7,8,.52) 70%,rgba(10,7,8,0) 100%)}
+
+/* Words arrive one at a time rather than the block fading in as a unit — the
+   sentence is three separate claims and reads better delivered that way. */
+/* one sentence per line: as inline-blocks they reflowed into each other and orphaned
+   the last word of the first claim onto a line by itself */
+.slam{display:block;
+  --sd:0;
+  --s:clamp(0,(var(--t,0) - .06 - var(--sd)*.09)*5,1);
+  opacity:var(--s);
+  transform:translate3d(0,calc((1 - var(--s)) * 18px),0) scale(calc(.94 + .06*var(--s)))}
+.slam:nth-child(2){--sd:1}
+.slam:nth-child(3){--sd:2}
+.pin__copy .lede,.pin__copy .price{
+  --s:clamp(0,(var(--t,0) - .30)*4,1);
+  opacity:var(--s);transform:translate3d(0,calc((1 - var(--s)) * 14px),0)}
+.pin__copy .price{--s:clamp(0,(var(--t,0) - .38)*4,1)}
+
+/* The rig holds ONE rigid object. The box and bottle were photographed together —
+   one light, one perspective, one ground plane — so splitting them into layers that
+   move independently breaks all of that at once and they read as sliding cutouts.
+   For the same reason there is no 3D rotation: rotating a flat photograph does not
+   change the perspective inside it, which is exactly what reads as a turning card.
+   The motion is 2D only, so it reads as the camera drifting rather than the product
+   deforming. Shadow, rim light and reflection are baked into the asset against this
+   scene's own lighting, so nothing here needs a CSS drop-shadow. */
+.rig{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center}
+/* The photograph is feathered to transparency at its own edges, so it needs no frame,
+   no border and no shadow from us — it simply dissolves into the canvas. Motion is a
+   slow rise on scroll and a few pixels of pointer drift: enough to feel alive, not
+   enough to argue with a still photograph's fixed perspective. */
+.rig__stack{position:relative;
+  width:min(100%,clamp(300px,33vw,470px),calc(84vh * 779 / 1252));
+  /* a slow push-in across the pinned beat: a still photograph with a camera move on it
+     reads as filmed, which is what the static packshot was missing next to the hero */
+  transform:translate3d(calc(var(--mx,0) * 7px),calc(var(--my,0) * 5px - (1 - var(--rs,1)) * 34px),0)
+            scale(calc(1 + var(--t,0) * .07));
+  transform-origin:52% 46%;
+  transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.rig.is-live .rig__stack{transition:transform .2s linear}
+.rig__unit{display:block;width:100%;height:auto}
+
+/* ---- inspection points ---- */
+.spots{position:absolute;inset:0}
+.spot{position:absolute;left:var(--sx);top:var(--sy);transform:translate(-50%,-50%);
+  width:38px;height:38px;padding:0;border:0;background:none;cursor:pointer;
+  display:grid;place-items:center;color:var(--accent)}
+.spot__dot{width:15px;height:15px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 2px rgba(237,28,36,.42),0 0 16px 3px rgba(237,28,36,.55);
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease)}
+/* the ring breathes so the affordance is findable without a permanent glow */
+/* the previous ring was one thin pulse every 2.8s and read as noise; this is a
+   heavier double ring on a shorter cycle so the marker asks to be touched */
+.spot__dot::after{content:"";position:absolute;inset:7px;border-radius:50%;
+  border:2px solid var(--accent);opacity:.8;animation:spotRing 1.9s ease-out infinite}
+.spot__dot::before{content:"";position:absolute;inset:7px;border-radius:50%;
+  border:2px solid var(--accent);opacity:.6;animation:spotRing 1.9s ease-out infinite;
+  animation-delay:-.95s}
+@keyframes spotRing{0%{transform:scale(.55);opacity:.85}70%{transform:scale(2.1);opacity:0}100%{opacity:0}}
+.spot:hover .spot__dot,.spot[aria-expanded="true"] .spot__dot{transform:scale(1.35)}
+.spot:focus-visible{outline:2px solid var(--text-primary);outline-offset:3px;border-radius:50%}
+
+.spot__note{position:absolute;left:var(--nx,0);top:var(--ny,0);
+  width:max-content;max-width:290px;padding:16px 18px;
+  background:rgba(6,4,5,.94);border:1px solid var(--panel-line);border-left:2px solid var(--accent);
+  font-size:16px;line-height:1.45;color:var(--text-secondary);
+  opacity:0;visibility:hidden;transform:translateY(5px);
+  transition:opacity .24s var(--ease),transform .24s var(--ease),visibility .24s;
+  pointer-events:none;z-index:4}
+.spot__note b{display:block;font-family:var(--mono);font-size:12.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--text-primary);margin-bottom:6px;font-weight:500}
+.spot__note.is-open{opacity:1;visibility:visible;transform:translateY(0)}
+
+@media (prefers-reduced-motion:reduce){
+  .spot__dot::after{animation:none;opacity:.5}
+  .spot__note{transition:opacity .12s linear}
+}
+
+@media (max-width:880px){
+  .track{height:auto}
+  .pin{position:static;height:auto;padding:clamp(60px,10vw,96px) 0}
+  .pin__inner{grid-template-columns:1fr;gap:44px}
+  /* There is no pin to scrub against once the track collapses, so --t never advances
+     past 0 and would leave every line at opacity 0. Phones get the copy outright. */
+  .slam,.pin__copy .lede,.pin__copy .price{opacity:1;transform:none}
+  .rig{height:auto}
+  .rig__stack{width:min(76%,300px);margin-inline:auto;transform:none}
+  .bed{opacity:.34}
+  .bed__veil{background:linear-gradient(180deg,var(--canvas) 0%,rgba(6,4,5,.62) 22%,rgba(6,4,5,.62) 78%,var(--canvas) 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .track{height:auto}
+  .pin{position:static;height:auto;padding:clamp(60px,10vw,96px) 0}
+  .slam,.pin__copy .lede,.pin__copy .price{opacity:1;transform:none}
+  .rig__stack{transform:none;transition:none}
+}
+.price{display:flex;align-items:baseline;gap:14px;margin:30px 0 0;flex-wrap:wrap}
+.price__n{font-family:var(--display);font-size:clamp(28px,3vw,40px);line-height:1}
+.price__u{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-secondary)}
+.tbd{color:var(--accent);border-bottom:1px dashed var(--accent-muted)}
+
+/* ------------------------------------------------------------ steps */
+/* The mechanism, stated as a formula before it is broken into parts. */
+.formula{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;margin:26px 0 0;
+  font-family:var(--mono);font-size:clamp(11px,1.05vw,14px);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-primary)}
+/* the three terms arrive in sequence off the section's own scroll progress — the
+   formula is the section's opening beat, not a static line */
+.formula span,.formula i{--fd:0;
+  --f:clamp(0,(var(--p,0) - .04 - var(--fd)*.05)*9,1);
+  opacity:var(--f);transform:translateY(calc((1 - var(--f)) * 8px));
+  display:inline-block}
+.formula i{font-style:normal;color:var(--accent);font-size:1.25em;line-height:1}
+.formula>:nth-child(2){--fd:1}.formula>:nth-child(3){--fd:2}
+.formula>:nth-child(4){--fd:3}.formula>:nth-child(5){--fd:4}
+
+/* Three equal bordered columns with an icon stacked over a heading is the single most
+   recognisable generated-page layout there is, so this is deliberately not that: no
+   cards, unequal tracks, the index inline with the heading, and hairlines carrying the
+   structure instead of boxes. */
+/* Break out of the 1180px reading measure to the 1800px the hero and product module
+   use. That width jump was doing as much damage to the transition as the loss of
+   motion: the page went cinematic-wide, then abruptly narrow. */
+
+/* =============================== THE LOUD SECTION (colour break) ===============
+   The one place the page leaves black. The film runs edge to edge at ANY viewport width
+   — no max-width, no gutters — and its height is bounded so an ultrawide monitor cannot
+   turn a full-bleed 16:9 frame into a two-thousand-pixel wall. Copy sits at shoulder
+   height so it clears her face, and everything is scrimmed only enough to read: the
+   picture is meant to show through the type, not sit behind a panel. */
+/* The frame locks while the scroll runs past it, exactly like the hero and the product
+   module. This costs scroll LENGTH, not frame height — the film is the same size it was;
+   there is simply enough travel now for the three lines to arrive one at a time instead
+   of the whole set landing in a fifth of a screen. */
+.loud-sec{--warm-deep:#0D0705;--fh:min(clamp(520px,44vw,1000px),80vh);
+  position:relative;padding:0;background:var(--warm-deep);height:230vh}
+.loud__film{position:sticky;top:calc((100vh - var(--fh)) / 2);
+  margin:0;overflow:hidden;background:#000;
+  width:100vw;margin-inline:calc(50% - 50vw);height:var(--fh)}
+/* lifted so the room feels lit rather than merely dark: the source grade is
+     deliberately low-key and the page was compounding it */
+.fill{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;
+  filter:brightness(1.16) saturate(1.06) contrast(1.02);
+  opacity:clamp(0,var(--p,0)*14,1)}
+
+/* barely there — enough to seat the type and carry the frame into the next section */
+.loud__foot{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(180deg,rgba(13,7,5,0) 0%,rgba(13,7,5,.06) 24%,rgba(13,7,5,.30) 50%,
+                  rgba(13,7,5,.60) 78%,rgba(13,7,5,.76) 100%),
+  linear-gradient(90deg,rgba(13,7,5,.78) 0%,rgba(13,7,5,.56) 34%,rgba(13,7,5,.22) 62%,rgba(13,7,5,0) 80%)}
+
+.loud{position:absolute;inset:0;z-index:2;max-width:1800px;margin-inline:auto;
+  padding:0 var(--gut) clamp(26px,4vh,52px)}
+
+/* Positioned as a percentage of the FRAME, not with a percentage margin — a percentage
+   margin resolves against the container's width, so it moved unpredictably as the
+   viewport changed. This sits just under her chin at every size. */
+.loud__copy{position:absolute;left:var(--gut);top:41%;
+  max-width:min(45%,620px)}
+.loud .h{font-size:clamp(28px,3.85vw,62px);line-height:1.12;max-width:100%;
+  letter-spacing:-.02em;
+  text-shadow:0 2px 34px rgba(0,0,0,.94),0 1px 5px rgba(0,0,0,.88)}
+
+
+/* One line at every width. It is a formula — breaking "roll-on application" onto its own
+   row made it read as a list instead. Sized off the viewport and set nowrap so it scales
+   to fit rather than wrapping, and kept inside the left flank the veil covers. */
+.formula{display:flex;flex-wrap:nowrap;white-space:nowrap;width:max-content;max-width:none;
+  align-items:baseline;gap:8px 13px;margin:20px 0 0;
+  font-family:var(--mono);font-size:clamp(9.5px,1.13vw,16px);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--text-primary);
+  text-shadow:0 1px 16px rgba(0,0,0,.94)}
+.formula span,.formula i{--fd:0;
+  --f:clamp(0,(var(--p,0) - .02 - var(--fd)*.022)*16,1);
+  opacity:var(--f);transform:translateY(calc((1 - var(--f)) * 8px));display:inline-block}
+.formula i{font-style:normal;color:var(--accent);font-size:1.3em;line-height:1}
+.formula>:nth-child(2){--fd:1}.formula>:nth-child(3){--fd:2}
+.formula>:nth-child(4){--fd:3}.formula>:nth-child(5){--fd:4}
+
+/* The three beats sit along the foot of the frame. Their own rules stay neutral; a
+   single accent rule rides above them and steps to whichever beat has just arrived, so
+   the red reads as one moving light rather than three separate coloured borders. */
+.beats{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(26px,4vh,52px);
+  --gap:clamp(18px,2.6vw,52px);
+  --col:calc((100% - 2 * var(--gap)) / 3);
+  list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.beats::after{content:"";position:absolute;top:0;left:0;height:2px;width:var(--col);
+  background:var(--accent);pointer-events:none;
+  /* 0 -> 1 -> 2 as each beat lands, and it slides rather than jumps */
+  --slot:calc(clamp(0,(var(--p,0) - .20) * 8,1) + clamp(0,(var(--p,0) - .46) * 8,1));
+  transform:translateX(calc(var(--slot) * (100% + var(--gap))));
+  opacity:clamp(0,(var(--p,0) - .03)*20,1);
+  box-shadow:0 0 18px 1px rgba(237,28,36,.55)}
+
+.beat{position:relative;padding-top:16px;border-top:1px solid rgba(244,239,235,.34);
+  --bd:0;
+  --b:clamp(0,(var(--p,0) - .06 - var(--bd)*.265)*8,1);
+  opacity:var(--b);transform:translate3d(calc((1 - var(--b)) * -34px),0,0)}
+.beat:nth-child(2){--bd:1}
+.beat:nth-child(3){--bd:2}
+.beat__n::after{content:"\2009\2014"}
+.beat__n{position:absolute;top:16px;left:0;font-family:var(--mono);font-size:12px;
+  letter-spacing:.2em;color:var(--accent);font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+  text-shadow:0 1px 12px rgba(0,0,0,.95)}
+.beat h3{margin:0 0 6px;padding-left:62px;font-family:var(--display);font-weight:400;
+  font-size:clamp(15px,1.38vw,22px);line-height:1.2;letter-spacing:.005em;
+  text-transform:uppercase;
+  text-shadow:0 2px 24px rgba(0,0,0,.95),0 1px 3px rgba(0,0,0,.9)}
+.beat p{margin:0;padding-left:62px;color:#E8E0E1;
+  font-size:clamp(14px,1.22vw,18px);line-height:1.45;
+  text-shadow:0 2px 22px rgba(0,0,0,.95),0 1px 3px rgba(0,0,0,.9)}
+
+/* A short laptop screen makes the frame short too, and a headline sized off viewport
+   WIDTH does not know that — it grew until it nearly met the beats. Trim it when the
+   frame is short rather than letting the two blocks close on each other. */
+@media (min-width:901px) and (max-height:780px){
+  .loud .h{font-size:clamp(25px,3.1vw,44px)}
+  .loud__copy{top:40%}
+  .beat h3{font-size:clamp(15px,1.4vw,20px)}
+  .beat p{font-size:clamp(12.5px,1.05vw,15px)}
+}
+@media (max-width:900px){
+  /* the couple gets a frame of their own — at 3/4 with copy over it the shot was cropped to
+     a slot and the faces were under the headline */
+  .loud-sec{height:auto;padding:0 0 clamp(30px,7vw,46px)}
+  .loud__film{position:static;height:auto;aspect-ratio:auto;display:block;
+    background:var(--warm-deep)}
+  .fill{opacity:1;position:relative;width:100%;height:auto;aspect-ratio:4/3;
+    object-fit:cover;object-position:50% 24%}
+  .loud__foot{position:absolute;top:0;left:0;right:0;height:0;
+    aspect-ratio:4/3;
+    background:linear-gradient(180deg,rgba(13,7,5,.42) 0%,rgba(13,7,5,0) 30%,
+               rgba(13,7,5,0) 66%,rgba(13,7,5,.9) 100%)}
+  .loud{position:static;inset:auto;padding:clamp(22px,6vw,34px) var(--gut) 0}
+  .loud__copy{position:static;max-width:none;margin:0 0 clamp(16px,3vw,26px)}
+  .loud .h{max-width:none}
+  .beats{position:static;left:auto;right:auto;bottom:auto}
+  .beats::after{display:none}
+  .beats{grid-template-columns:1fr;gap:0}
+  .beat{padding:11px 0;opacity:1;transform:none;border-top-color:rgba(244,239,235,.28)}
+  .beat__n{top:11px}
+  .beat h3{font-size:17.5px;margin-bottom:5px}
+  /* these were hidden on phones — the three descriptions are the only place the benefits
+     are actually explained, so the phone was losing the argument, not just some words */
+  .beat p{display:block;font-size:14px;line-height:1.55;color:var(--text-secondary);
+    margin:0;max-width:46ch}
+  .beat{padding:14px 0 4px}
+  .formula span,.formula i{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .fill{opacity:1}
+  .formula span,.formula i,.beat{opacity:1;transform:none}
+}
+
+
+
+/* --------------------------------------------------- the one drop UI */
+.drop{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,66px);align-items:center;margin:48px 0 0}
+@media (max-width:880px){.drop{grid-template-columns:1fr}}
+/* ------------------------------------------------- the scent film
+   The hero's settle band, applied to a scrubbed film: copy flanks the product on both
+   sides, the centre lane stays clear for the bottle, and every line arrives off the same
+   scroll that unscrews the cap. Frame height matches the modules above rather than
+   claiming a full viewport. */
+.track--scent{--warm-deep:#070405;--fh:min(clamp(500px,44vw,940px),78vh);
+  position:relative;height:250vh;background:var(--warm-deep)}
+.pin--scent{position:sticky;top:calc((100vh - var(--fh)) / 2);height:var(--fh);
+  overflow:hidden;background:#000}
+.scent__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  object-position:50% 50%;background:#000;
+  /* lifted to sit with the two modules above, which are graded brighter */
+  filter:brightness(1.28) saturate(1.06)}
+/* two-sided scrim, as on the settle band: both flanks are seated, the centre lane where
+   the bottle stands is left alone */
+.scent__veil{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(7,4,5,.98) 0%,rgba(7,4,5,.94) 22%,rgba(7,4,5,.66) 38%,rgba(7,4,5,.20) 50%,rgba(7,4,5,0) 60%),
+  linear-gradient(270deg,rgba(7,4,5,.98) 0%,rgba(7,4,5,.94) 22%,rgba(7,4,5,.66) 38%,rgba(7,4,5,.20) 50%,rgba(7,4,5,0) 60%),
+  linear-gradient(180deg,rgba(7,4,5,.88) 0%,rgba(7,4,5,.42) 18%,rgba(7,4,5,0) 40%,
+                  rgba(7,4,5,.22) 80%,rgba(7,4,5,.52) 100%)}
+
+.scent__ui{position:absolute;inset:0;z-index:2;max-width:1800px;margin-inline:auto;
+  padding:clamp(58px,7vh,86px) var(--gut) clamp(24px,3.4vh,46px);
+  display:flex;flex-direction:column}
+.scent__brow{margin:0;color:var(--accent);text-shadow:0 1px 12px rgba(0,0,0,.9)}
+.scent__head{margin:0;max-width:min(17ch,34%);font-size:clamp(22px,2.5vw,40px);line-height:1.06;
+  letter-spacing:-.015em;text-shadow:0 2px 30px rgba(0,0,0,.94),0 1px 4px rgba(0,0,0,.85);
+  --hs:clamp(0,var(--sp,0)*7,1);
+  opacity:var(--hs);transform:translate3d(0,calc((1 - var(--hs)) * 14px),0)}
+
+/* the centre column is empty on purpose: it is the bottle's lane */
+.scent__cols{flex:1;display:grid;grid-template-columns:1fr .82fr 1fr;
+  gap:clamp(20px,3vw,56px);align-items:center;margin-top:clamp(14px,2.2vh,30px)}
+.sn{list-style:none;margin:0;padding:0;display:grid;gap:clamp(14px,2.2vh,30px)}
+.sn--l{grid-column:1}
+.sn--r{grid-column:3}
+.sn li{position:relative;padding-top:13px;border-top:1px solid rgba(244,239,235,.24);
+  --sd:0;
+  --sv:clamp(0,(var(--sp,0) - .16 - var(--sd)*.15)*7,1);
+  opacity:var(--sv)}
+.sn--l li{transform:translate3d(calc((1 - var(--sv)) * -20px),0,0)}
+.sn--r li{transform:translate3d(calc((1 - var(--sv)) * 20px),0,0)}
+.sn--r li{--sd:0.5}
+.sn li:nth-child(2){--sd:1}
+.sn--r li:nth-child(2){--sd:1.5}
+.sn li:nth-child(3){--sd:2}
+.sn--r li:nth-child(3){--sd:2.5}
+.sn li:first-child{border-top-color:var(--accent)}
+
+.sn__k{display:block;font-family:var(--mono);font-size:clamp(11px,1.02vw,14px);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:7px;
+  text-shadow:0 1px 12px rgba(0,0,0,.92)}
+.sn__v{display:block;font-family:var(--display);font-weight:400;
+  font-size:clamp(15px,1.32vw,21px);line-height:1.2;color:var(--text-primary);
+  margin-bottom:5px;text-shadow:0 2px 20px rgba(0,0,0,.95),0 1px 3px rgba(0,0,0,.88)}
+.sn__d{display:block;font-size:clamp(14px,1.2vw,17.5px);line-height:1.45;color:#E4DBDD;
+  text-shadow:0 2px 18px rgba(0,0,0,.95),0 1px 3px rgba(0,0,0,.88)}
+.sn--r .sn__k{color:var(--accent)}
+
+@media (max-width:900px){
+  /* film first, at its own size and with nothing on top of it, then the copy underneath on
+     the page's own black. contain rather than cover, because a cropped bottle is worse than
+     letterboxing on a product shot. */
+  .track--scent{height:auto;--fh:auto}
+  .pin--scent{position:static;height:auto;display:block;background:var(--canvas)}
+  .scent__vid{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:16/9;
+    object-fit:contain;object-position:50% 50%;background:#000}
+  .scent__veil{height:auto;bottom:auto;aspect-ratio:16/9;
+    background:linear-gradient(180deg,rgba(7,4,5,.5) 0%,rgba(7,4,5,0) 26%,
+               rgba(7,4,5,0) 74%,rgba(7,4,5,.62) 100%)}
+  .scent__ui{position:static;inset:auto;padding:clamp(24px,6vw,38px) var(--gut) clamp(30px,7vw,44px)}
+  .scent__head{max-width:none}
+  .scent__cols{grid-template-columns:1fr;gap:0;align-content:start;margin-top:18px}
+  .sn{gap:0}
+  .sn--l,.sn--r{grid-column:1}
+  .sn--r{margin-top:10px}
+  .sn li{padding:9px 0;opacity:1;transform:none}
+  .sn__v{font-size:15px;margin-bottom:3px}
+  .sn__d{font-size:13.5px}
+  .scent__veil{background:linear-gradient(180deg,rgba(7,4,5,.86) 0%,rgba(7,4,5,.34) 26%,
+    rgba(7,4,5,.34) 54%,rgba(7,4,5,.88) 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .sn li,.scent__head{opacity:1;transform:none}
+}
+.notes{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid var(--panel-line)}
+.notes li{padding:20px 0;border-bottom:1px solid var(--panel-line);
+  display:grid;grid-template-columns:82px 1fr;gap:24px;align-items:baseline;
+  opacity:.48;transform:translateX(-8px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.notes li.lit{opacity:1;transform:none}
+.notes .lab{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.notes .val{font-family:var(--display);font-size:clamp(17px,1.6vw,21px)}
+
+/* ------------------------------------------------- what is in it */
+
+
+/* ------------------------------------------------------------ proof */
+/* One row that scrolls, rather than a masonry block. Eight reviews will not fit across
+   a viewport, so the row snaps and the controls page through it. */
+/* three tracks so the label can sit dead centre with the controls still on the right */
+.revs__bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;
+  margin:44px 0 18px}
+.revs__bar>:first-child{grid-column:2;justify-self:center}
+.revs__nav{grid-column:3;justify-self:end}
+@media (max-width:640px){
+  .revs__bar{grid-template-columns:1fr;gap:14px;justify-items:center}
+  .revs__bar>:first-child,.revs__nav{grid-column:1;justify-self:center}
+}
+/* a heading in the page's display face, not a caption — scaled under the h2 above it */
+.revs__count{margin:0;font-family:var(--display);font-weight:400;
+  font-size:clamp(17px,1.9vw,27px);line-height:1.1;letter-spacing:-.01em;
+  text-transform:none;color:var(--accent);text-align:center}
+
+.revs__nav{display:flex;gap:8px}
+.revs__btn{width:40px;height:40px;border:1px solid var(--panel-line);background:transparent;
+  color:var(--text-primary);font-size:16px;line-height:1;border-radius:3px;cursor:pointer;
+  transition:border-color .25s var(--ease),background .25s var(--ease),color .25s var(--ease)}
+.revs__btn:hover{border-color:var(--accent);color:var(--accent)}
+.revs__btn:focus-visible{outline:2px solid var(--text-primary);outline-offset:2px}
+.revs__btn[disabled]{opacity:.34;cursor:default;border-color:var(--panel-line);color:var(--text-secondary)}
+.revs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);
+  align-items:start;
+  gap:clamp(14px,1.6vw,22px);overflow-x:auto;scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;padding-bottom:6px;
+  scrollbar-width:thin;scrollbar-color:var(--panel-line) transparent}
+.revs::-webkit-scrollbar{height:6px}
+.revs::-webkit-scrollbar-thumb{background:var(--panel-line);border-radius:3px}
+.revs:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (max-width:900px){.revs{columns:2 280px}}
+@media (max-width:620px){.revs{columns:1}}
+.rev{scroll-snap-align:start;margin:0;padding:26px 24px;display:flex;flex-direction:column;
+  min-height:var(--rev-h,auto);
+  background:var(--panel);border:1px solid var(--panel-line);border-radius:3px;
+  transition:border-color .5s var(--ease),transform .5s var(--ease)}
+.rev:hover{border-color:var(--border-strong);transform:translateY(-3px)}
+.rev__stars{color:var(--accent);font-size:13px;letter-spacing:.14em;margin:0 0 12px}
+/* two lines reserved: titles run one to three lines across the eight reviews, and without
+   this every card started its body text at a different height */
+.rev__t{font-family:var(--display);font-size:15px;line-height:1.3;margin:0 0 12px;
+  letter-spacing:-.005em;min-height:2.6em}
+/* Every card shows the same six lines, so the row reads as a row, and only the cards with
+   something hidden get a control. The height is animated to a measured pixel value rather
+   than to a guessed max-height, so the easing is honest at any length. */
+.rev blockquote{margin:0;font-size:14.5px;line-height:1.62;overflow:hidden;
+  min-height:9.72em;max-height:9.72em;
+  transition:max-height .55s cubic-bezier(.22,.61,.36,1)}
+.rev.open blockquote{max-height:var(--full,240em)}
+.rev--clip:not(.open) blockquote{
+  -webkit-mask-image:linear-gradient(180deg,#000 74%,rgba(0,0,0,0) 100%);
+          mask-image:linear-gradient(180deg,#000 74%,rgba(0,0,0,0) 100%)}
+.rev blockquote p{color:var(--text-secondary);font-size:inherit;line-height:inherit;margin:0 0 10px}
+
+.rev__more{align-self:flex-start;margin:12px 0 0;padding:0;background:none;border:0;
+  border-bottom:1px solid rgba(237,28,36,.4);cursor:pointer;
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);
+  transition:color .25s var(--ease),border-color .25s var(--ease)}
+.rev__more:hover{color:var(--text-primary);border-bottom-color:var(--text-primary)}
+.rev__more:focus-visible{outline:2px solid var(--text-primary);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.rev blockquote{transition:none}}
+.rev blockquote p:last-child{margin-bottom:0}
+.rev figcaption{margin:auto 0 0;padding-top:16px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-primary);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.rev figcaption span{color:var(--accent);font-size:9px}
+
+/* -------------------------------------------------------- guarantee */
+/* ------------------------------------------------- the guarantee
+   The page opens on a locked frame and closes on one. Here the frame holds while the
+   reader's scroll cranes the camera down through the cloud, the promise assembles, and a
+   red rule travels above the three steps — uncovering them one at a time, so the way out
+   is something he walks rather than reads.
+   The copy sits left, which is what lets the plate be genuinely present on the right
+   instead of being dimmed into a texture. */
+.track--guar{--fh:min(clamp(520px,46vw,900px),82vh);
+  position:relative;height:260vh;background:var(--canvas)}
+.pin--guar{position:sticky;top:calc((100vh - var(--fh)) / 2);height:var(--fh);
+  overflow:hidden;background:#000}
+
+/* The cloud owns the frame while the reader is descending, then lifts — by the end of the
+   scrub it is gone entirely and the promise sits on clean black. That is also what lets it
+   be this heavy in the first place: nothing has to stay readable through it at the end. */
+/* The page's own ambient crimson smoke, the same clip the fixed environment layer runs
+   everywhere else — so this section is breathing the identical air rather than wearing a
+   picture of it. It plays; it is not scrubbed. Scroll drives only the wipe.
+   The wipe is a soft diagonal that clears from the left, because that is the direction the
+   eye is already travelling when it reaches the copy. */
+.guar__sky{position:absolute;inset:0;overflow:hidden;z-index:0;
+  --wipe:calc(var(--sp,0) * 138% - 26%);
+  -webkit-mask-image:linear-gradient(97deg,
+    rgba(0,0,0,0) 0%,rgba(0,0,0,0) var(--wipe),
+    #000 calc(var(--wipe) + 54%),#000 100%);
+          mask-image:linear-gradient(97deg,
+    rgba(0,0,0,0) 0%,rgba(0,0,0,0) var(--wipe),
+    #000 calc(var(--wipe) + 54%),#000 100%);
+  opacity:clamp(0,(1 - var(--sp,0)) / .1,1)}
+.guar__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:50% 30%;opacity:0;transition:opacity 1.4s var(--ease);
+  /* a slow settle rather than a crane: the clip already carries its own motion */
+  transform:scale(calc(1.72 - .12 * var(--sp,0)));
+  transform-origin:50% 34%;
+  filter:blur(1.2px) brightness(1.22) saturate(.94)}
+.guar__vid.on{opacity:.68}
+
+.guar__veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(180deg,var(--canvas) 0%,rgba(6,4,5,.5) 7%,rgba(6,4,5,.08) 20%,
+                  rgba(6,4,5,.08) 80%,rgba(6,4,5,.5) 93%,var(--canvas) 100%)}
+/* and the reading ground, which arrives with the words rather than before them. At the top
+   of the track it is barely there, so the opening frame is pure weather. */
+.guar__scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  opacity:1;
+  background:radial-gradient(74% 68% at 50% 50%,rgba(6,4,5,.82) 0%,rgba(6,4,5,.72) 58%,
+                  rgba(6,4,5,.32) 84%,rgba(6,4,5,0) 100%)}
+
+.guar__ui{position:absolute;inset:0;z-index:2;display:flex;align-items:center;
+  padding:clamp(34px,5vh,64px) 0}
+.guar__in{width:100%;max-width:calc(1800px - var(--gut) * 2);margin:0 auto;
+  padding:0 var(--gut);text-align:center}
+
+/* everything arrives off the same progress that drives the camera */
+.guar__kick,.guar__h1,.guar__h2,.guar__p,.step,.steps__arrow{
+  --a:0;--ramp:.15;
+  --r:clamp(0,(var(--sp,0) - var(--a)) / var(--ramp),1);
+  opacity:clamp(0,calc(var(--r) * 1.8),1);
+  transform:translate3d(0,calc((1 - var(--r)) * 18px),0)}
+
+/* the eyebrow is a headline in its own right here, not a caption */
+.guar__kick{--a:.10;display:inline-flex;align-items:center;gap:11px;margin:0 auto clamp(16px,2.4vh,26px);
+  font-family:var(--mono);font-weight:500;
+  font-size:clamp(13px,1.35vw,21px);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);padding-bottom:10px;border-bottom:2px solid var(--accent);
+  text-shadow:0 1px 12px rgba(0,0,0,.9)}
+.guar__chev{width:clamp(15px,1.5vw,22px);height:auto;flex:none}
+
+/* sentence case, like every other headline on the page — the caps version was the one
+   thing in this section speaking a different language */
+.guar__h{margin:0 auto;font-family:var(--display);font-weight:400;
+  font-size:clamp(29px,4.6vw,74px);line-height:1.02;letter-spacing:-.024em;
+  max-width:min(1240px,88%)}
+.guar__h1,.guar__h2{display:block;
+  text-shadow:0 2px 30px rgba(0,0,0,.94),0 1px 4px rgba(0,0,0,.88)}
+.guar__h1{--a:.17;color:var(--text-primary)}
+.guar__h2{--a:.24;color:var(--accent)}
+
+.guar__p{--a:.33;color:var(--text-secondary);margin:clamp(18px,2.6vh,30px) auto 0;
+  font-size:clamp(14px,1.28vw,19px);line-height:1.72;max-width:min(64ch,84%);
+  text-shadow:0 2px 18px rgba(0,0,0,.95),0 1px 3px rgba(0,0,0,.9)}
+
+/* the three steps, uncovered by a rule that travels above them */
+.steps{margin:clamp(26px,4vh,52px) auto 0;max-width:min(1400px,94%)}
+.steps__rail{position:relative;height:2px;background:rgba(244,239,235,.16);
+  margin:0 0 clamp(14px,2vh,22px)}
+.steps__fill{position:absolute;inset:0;background:var(--accent);transform-origin:0 50%;
+  transform:scaleX(clamp(0,(var(--sp,0) - .40) / .30,1));
+  box-shadow:0 0 14px 1px rgba(237,28,36,.55)}
+/* one line, always — the three steps read as a single path, and a wrapped third step
+   reads as an afterthought */
+.steps__row{list-style:none;display:flex;flex-wrap:nowrap;align-items:flex-start;
+  justify-content:center;gap:clamp(10px,1.7vw,32px);margin:0;padding:0}
+/* each step is a stack: the instruction, and the reassurance directly under it */
+.step{display:flex;flex-direction:column;align-items:center;gap:5px}
+.step em{font-style:normal;font-family:var(--mono);color:var(--accent);
+  font-size:clamp(9.5px,.86vw,12.5px);letter-spacing:.16em;text-transform:lowercase;
+  text-shadow:0 1px 10px rgba(0,0,0,.92)}
+.steps__arrow{display:flex;align-items:center;color:var(--accent);
+  height:calc(clamp(15px,2.1vw,35px) * 1.05)}
+.steps__arrow svg{width:clamp(18px,2.2vw,34px);height:auto}
+.steps__row>:nth-child(1){--a:.45}
+/* each arrow arrives with the step it points at */
+.steps__row>:nth-child(2),.steps__row>:nth-child(3){--a:.56}
+.steps__row>:nth-child(4),.steps__row>:nth-child(5){--a:.67}
+.step b{font-family:var(--display);font-weight:400;white-space:nowrap;
+  color:var(--text-primary);font-size:clamp(15px,2.1vw,35px);line-height:1.05;
+  letter-spacing:-.015em;
+  text-shadow:0 2px 22px rgba(0,0,0,.95),0 1px 3px rgba(0,0,0,.9)}
+
+@media (max-width:900px){
+  .track--guar{height:auto;--fh:auto}
+  /* the generic mobile .pin padding doubles up with .guar__ui's own — one air budget, not two */
+  .pin--guar{position:relative;height:auto;aspect-ratio:auto;min-height:0;padding:0;display:flex;align-items:center}
+  .guar__ui{position:relative;inset:auto;width:100%;padding:clamp(46px,12vw,72px) 0}
+
+
+  .steps__row{flex-wrap:wrap;flex-direction:column;align-items:center;gap:14px}
+  .steps__arrow{transform:rotate(90deg);height:auto}
+  .step b{font-size:clamp(20px,6.4vw,30px)}
+  .guar__kick,.guar__h1,.guar__h2,.guar__p,.step,.steps__arrow{opacity:1;transform:none}
+  .steps__fill{transform:scaleX(1)}
+  /* --sp never runs at this width, so there is nothing to drive a parting: the plate
+     just sits, and the veil carries the legibility */
+  .guar__sky{opacity:1;-webkit-mask-image:none;mask-image:none}
+  .guar__scrim{opacity:1}
+  /* the section is static at this width, so --sp never runs and the plate never clears —
+     the veil has to carry the whole protection on its own. Centred, like the copy. */
+  .guar__veil{background:
+    radial-gradient(96% 76% at 50% 50%,rgba(6,4,5,.97) 0%,rgba(6,4,5,.95) 54%,
+                    rgba(6,4,5,.84) 100%),
+    linear-gradient(180deg,var(--canvas) 0%,rgba(6,4,5,.26) 12%,
+                    rgba(6,4,5,.26) 88%,var(--canvas) 100%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .guar__kick,.guar__h1,.guar__h2,.guar__p,.step,.steps__arrow{opacity:1;transform:none}
+    .steps__fill{transform:scaleX(1)}
+}
+
+/* ------------------------------------------------------ price tiers */
+
+
+/* the reviews headline sits on the page's centre axis, like the guarantee above it and the
+   offer below — the card row underneath keeps its own left-to-right reading */
+#proof .eyebrow{justify-content:center}
+#proof .h,#proof .lede{text-align:center}
+#proof .lede{margin-left:auto;margin-right:auto}
+
+/* ------------------------------------------------------------- close */
+/* ---------------------------------------------------------- the buy box
+   One component, used twice: inside the product module and at the close. Choosing a
+   quantity is its own step — the card lights and the dot fills — and only then does the
+   single CTA carry that choice to checkout. Two separate offers with two separate looks
+   was the page asking the same question twice in two different voices. */
+.buy{--sel:0;--cgap:clamp(10px,1.2vw,18px);
+  display:grid;grid-template-columns:.9fr 1.24fr .9fr;gap:0 var(--cgap)}
+.buy > *{grid-column:1/-1}
+.pin__copy .buy{--s:clamp(0,(var(--t,0) - .38)*4,1);opacity:var(--s);
+  transform:translate3d(0,calc((1 - var(--s)) * 14px),0)}
+.buy__opts{display:grid;grid-template-columns:.9fr 1.24fr .9fr;
+  gap:var(--cgap);align-items:stretch;margin:0}
+@media (max-width:760px){
+  .buy{grid-template-columns:1fr}
+  .buy__opts{grid-template-columns:1fr;width:100%;max-width:430px;margin-inline:auto}
+  .buy .cta{grid-column:1;width:100%;max-width:430px;margin-inline:auto}
+}
+
+/* the card is a label wrapping a real radio: keyboard, arrow keys and screen readers all
+   work without a line of JS pretending to be a form control */
+.opt{position:relative;display:grid;justify-items:center;align-content:start;
+  gap:6px;padding:30px 16px 18px;cursor:pointer;border-radius:4px;
+  background:rgba(6,4,5,.62);border:1.5px solid var(--panel-line);
+  transition:border-color .28s var(--ease),background .28s var(--ease),
+             transform .28s var(--ease),box-shadow .28s var(--ease)}
+.opt__in{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+.opt:hover{border-color:rgba(237,28,36,.55);background:rgba(20,7,9,.8);transform:translateY(-2px)}
+.opt:has(.opt__in:focus-visible){outline:2px solid var(--text-primary);outline-offset:3px}
+
+/* the dot: hollow until chosen, then filled accent with a ring around it */
+.opt__dot{width:17px;height:17px;border-radius:50%;border:1.5px solid var(--border-strong);
+  background:transparent;margin-bottom:4px;
+  transition:border-color .28s var(--ease),background .28s var(--ease),box-shadow .28s var(--ease)}
+.opt.is-sel .opt__dot{border-color:var(--accent);background:var(--accent);
+  box-shadow:0 0 0 3px rgba(237,28,36,.22),0 0 14px 2px rgba(237,28,36,.55)}
+
+/* chosen: the whole card goes red, which is the only place on the page a card does */
+.opt.is-sel{border-color:var(--accent);background:rgba(40,9,12,.9);
+  box-shadow:0 0 0 1px rgba(237,28,36,.5),0 0 34px -8px rgba(237,28,36,.5),
+             0 16px 44px -22px rgba(237,28,36,.6)}
+.opt.is-sel:hover{background:rgba(50,11,15,.94)}
+
+.opt--best{border-color:rgba(237,28,36,.5);background:rgba(30,8,10,.82);padding-top:34px}
+.opt--best.is-sel{box-shadow:0 0 0 1px rgba(237,28,36,.7),0 0 44px -6px rgba(237,28,36,.55),
+             0 20px 52px -22px rgba(237,28,36,.65)}
+.opt__flag{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  background:var(--accent);color:#fff;padding:4px 11px;border-radius:2px;white-space:nowrap}
+
+.opt__q{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--text-secondary)}
+.opt.is-sel .opt__q,.opt--best .opt__q{color:var(--text-primary)}
+.opt__p{font-family:var(--display);font-size:clamp(24px,2.4vw,34px);line-height:1;
+  color:var(--text-primary);font-variant-numeric:tabular-nums}
+.opt--best .opt__p{font-size:clamp(32px,3.5vw,50px)}
+.opt__each{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);font-variant-numeric:tabular-nums}
+.opt--best .opt__each{font-size:12px;color:var(--text-secondary)}
+/* the row is kept even when empty so the three cards agree line for line */
+.opt__u{min-height:1.5em;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;
+  color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.opt--best .opt__u{font-size:13px}
+.opt__u s{color:var(--text-secondary);opacity:.6;text-decoration-thickness:1px}
+.opt__tag{margin-top:6px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-secondary)}
+.opt__tag--rib{color:var(--accent);border:1px solid rgba(237,28,36,.42);border-radius:2px;
+  padding:5px 10px;background:rgba(237,28,36,.09);letter-spacing:.12em}
+
+/* the four reassurances, on one rule-separated strip */
+.trust{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:0;margin:clamp(24px,2.8vw,36px) 0 0;padding:0}
+.trust li{display:flex;align-items:center;gap:9px;padding:0 clamp(14px,1.7vw,26px);
+  border-left:1px solid var(--panel-line)}
+.trust li:first-child{border-left:0}
+.trust svg{width:19px;height:19px;flex:none;color:var(--accent)}
+.trust span{display:flex;flex-direction:column;gap:2px;text-align:left;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-secondary);line-height:1.25}
+.trust b{font-weight:500;font-size:11px;letter-spacing:.17em;color:var(--text-primary)}
+@media (max-width:820px){
+  .trust li{border-left:0;padding:7px 12px;flex:0 0 auto}
+  .trust{gap:2px 6px}
+}
+
+/* the single action. Full width, because at this point in the page there is one thing left
+   to do and the button should not look like it is one of several options. */
+.cta{grid-column:2;position:relative;display:flex;align-items:center;justify-content:center;
+  gap:13px;margin:clamp(22px,2.6vw,32px) 0 0;
+  padding:clamp(16px,1.55vw,21px) clamp(16px,1.6vw,26px);border-radius:4px;
+  background:linear-gradient(180deg,#F42731 0%,var(--accent) 46%,#C4141B 100%);
+  border:1px solid #FF4A52;color:#fff;text-decoration:none;cursor:pointer;
+  font-family:var(--display);font-weight:400;font-size:clamp(17px,1.9vw,26px);
+  letter-spacing:.005em;
+  box-shadow:0 0 0 1px rgba(237,28,36,.4),0 0 46px -8px rgba(237,28,36,.6),
+             0 20px 50px -24px rgba(237,28,36,.75);
+  transition:transform .3s var(--ease),box-shadow .35s var(--ease),filter .3s var(--ease)}
+.cta:hover{transform:translateY(-2px);filter:brightness(1.07);
+  box-shadow:0 0 0 1px rgba(237,28,36,.6),0 0 58px -6px rgba(237,28,36,.72),
+             0 24px 58px -24px rgba(237,28,36,.85)}
+.cta:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.cta__i{width:clamp(18px,1.5vw,22px);height:clamp(18px,1.5vw,22px);flex:none}
+.cta__a{width:clamp(22px,1.9vw,30px);height:auto;flex:none;
+  transition:transform .3s var(--ease)}
+.cta:hover .cta__a{transform:translateX(4px)}
+.cta[aria-disabled="true"]{cursor:default}
+.cta[aria-disabled="true"]:hover{transform:none;filter:none}
+
+.buy__join{display:flex;align-items:center;justify-content:center;gap:9px;
+  margin:clamp(14px,1.6vw,20px) 0 0;font-family:var(--mono);
+  font-size:clamp(10.5px,1vw,12.5px);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-secondary)}
+.buy__join svg{width:17px;height:17px;flex:none;color:var(--accent)}
+.buy__join b{color:var(--accent);font-weight:500}
+.buy__help{margin:14px 0 0;font-size:14px;color:var(--text-dim)}
+.buy__mail{color:var(--text-secondary);text-underline-offset:3px}
+.buy__mail:hover{color:var(--accent)}
+.sub__hit{display:block;margin-top:4px;color:var(--accent);font-weight:inherit}
+
+/* the module copy column is roughly half a viewport, so the same component runs tighter */
+/* the cards were sitting against the lede above them */
+.buy--compact{margin-top:clamp(24px,3.4vh,42px);--cgap:clamp(8px,.9vw,13px)}
+.buy--compact .opt{padding:25px 11px 15px;gap:4px}
+.buy--compact .opt--best{padding-top:30px}
+.buy--compact .opt__p{font-size:clamp(19px,1.7vw,26px)}
+.buy--compact .opt--best .opt__p{font-size:clamp(25px,2.5vw,36px)}
+/* these had been squeezed to 9–10.5px to fit the column and stopped being readable */
+.buy--compact .opt__q{font-size:11.5px;letter-spacing:.16em}
+.buy--compact .opt__each{font-size:11px;letter-spacing:.1em}
+.buy--compact .opt__u{font-size:12.5px}
+.buy--compact .opt--best .opt__u{font-size:14px}
+.buy--compact .opt__tag{font-size:11px;letter-spacing:.14em;margin-top:5px}
+.buy--compact .opt__tag--rib{padding:5px 9px;letter-spacing:.07em;font-size:10.5px}
+.buy--compact .opt__dot{width:14px;height:14px}
+.buy--compact .opt__flag{font-size:9px;padding:3px 8px}
+.buy--compact .trust{margin-top:18px}
+.buy--compact .trust li{padding:0 clamp(8px,1vw,14px);gap:7px}
+.buy--compact .trust svg{width:16px;height:16px}
+.buy--compact .trust span{font-size:8.5px;letter-spacing:.12em}
+.buy--compact .trust b{font-size:9.5px;letter-spacing:.13em}
+.buy--compact .cta{margin-top:clamp(18px,2.2vh,26px);
+  padding:13px clamp(12px,1.2vw,20px);font-size:clamp(13px,1.1vw,16px);gap:9px}
+.buy--compact .cta__i{width:16px;height:16px}
+.buy--compact .cta__a{width:21px}
+@media (max-width:1180px){
+  .buy--compact{grid-template-columns:1fr}
+  .buy--compact .cta{grid-column:1;max-width:none;margin-inline:0}
+  .buy--compact .buy__opts{grid-template-columns:1fr;gap:8px;max-width:none}
+  .buy--compact .opt{grid-template-columns:auto auto 1fr auto;justify-items:start;
+    align-items:center;padding:12px 14px;gap:4px 12px}
+  .buy--compact .opt__flag{position:static;transform:none;grid-column:1/-1;justify-self:end}
+  .buy--compact .opt__u,.buy--compact .opt__tag{margin-top:0}
+}
+@media (max-width:560px){
+  .buy--compact .opt{grid-template-columns:1fr;justify-items:center;text-align:center;
+    padding:18px 14px 15px;gap:5px}
+  .buy--compact .opt__flag{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);
+    justify-self:auto}
+  .buy--compact .opt--best{padding-top:24px}
+  .buy--compact .opt__u,.buy--compact .opt__tag{margin-top:2px}
+}
+@media (prefers-reduced-motion:reduce){.opt,.cta,.cta__a{transition:none}}
+
+.close{position:relative;text-align:center;padding:clamp(84px,11vw,150px) var(--gut)}
+.close h2{font-family:var(--display);font-weight:400;margin:0;
+  font-size:clamp(30px,5vw,66px);line-height:1.02;letter-spacing:-.02em}
+.close .sub{color:var(--text-secondary);margin:22px auto 0;max-width:52ch}
+.close .buy{max-width:1040px;margin:clamp(34px,4vw,52px) auto 0;
+  opacity:0;transform:translateY(20px);
+  transition:opacity .8s var(--ease),transform .9s cubic-bezier(.22,.61,.36,1);
+  transition-delay:.12s}
+.close .buy.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.close .buy{opacity:1;transform:none;transition:none}}
+
+
+/* ------------------------------------------------------------ footer */
+footer{position:relative;z-index:2;border-top:1px solid var(--panel-line);
+  padding:56px var(--gut) 44px;background:var(--canvas-deep)}
+.foot{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;
+  gap:28px;flex-wrap:wrap;align-items:flex-start}
+.foot img{height:30px;width:auto;opacity:.95}
+.foot__links{display:flex;gap:24px;flex-wrap:wrap}
+.foot a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-secondary);text-decoration:none;transition:color .35s var(--ease)}
+.foot a:hover{color:var(--accent)}
+.fine{max-width:1180px;margin:34px auto 0;color:#8C8084;font-size:12px;line-height:1.7}
+
+/* -------------------------------------------------- section divider */
+.div{display:block;width:100%;height:1px;border:0;margin:0;
+  background:linear-gradient(90deg,transparent,var(--panel-line) 18%,var(--panel-line) 82%,transparent)}
+
+/* The formula is pinned to one line by design. At 390px that line needs 408px in a 350px
+   column, so it is scaled to fit rather than allowed to wrap — the rule survives, the
+   overflow does not. And anchored jumps have to clear the fixed shipping bar and nav. */
+@media (max-width:560px){
+  .formula{font-size:9.4px;letter-spacing:.07em;gap:7px 8px}
+  .formula i{font-size:1.2em}
+}
+section[id]{scroll-margin-top:74px}
+
+/* ========================================================= MOBILE TYPE
+   Every headline on the page is sized clamp(N, ~4vw, M). At 390px the viewport term lands
+   near 14px, so all of them bottom out on their floor and the hierarchy flattens: measured,
+   desktop runs 3.3x body at the headline, mobile ran 1.6x. One scale here, by role, driven
+   by a viewport term that actually engages at phone widths. */
+@media (max-width:900px){
+  h2.h,
+  .loud .h,
+  .close h2,
+  .guar__h,
+  h2.scent__head,
+  .static-hero h1{
+    font-size:clamp(30px,8.4vw,40px);line-height:1.05;letter-spacing:-.022em}
+
+  .lede,.sub,.static-hero .sub,.close .sub,.guar__p{
+    font-size:16.5px;line-height:1.58}
+
+  /* the eyebrow keeps its own smaller step so it never competes with the headline */
+  .eyebrow,.kicker,.guar__kick{font-size:11.5px;letter-spacing:.2em}
+
+  /* one rhythm: the same air above and below every unpinned section */
+  .sec{padding:clamp(58px,15vw,92px) var(--gut)}
+  .loud-sec{padding-bottom:clamp(34px,9vw,52px)}
+  .static-hero{padding-bottom:clamp(40px,10vw,60px)}
+}
+
+/* ======================================================== MOBILE MOTION
+   Below 900px every track unpins, so a progress value meaning "how far through the pinned
+   stretch" stops corresponding to anything the reader can see. Every progress-driven reveal
+   is resolved to its final state here, and motion is handed to the viewport observer
+   instead — content rises as it arrives, which is what a phone wants. */
+@media (max-width:900px){
+  .slam,
+  .pin__copy .lede,.pin__copy .price,.pin__copy .buy,
+  .scent__head,.sn li,
+  .guar__kick,.guar__h1,.guar__h2,.guar__p,.step,.steps__arrow{
+    --s:1;--hs:1;--sv:1;--r:1;--kc:1}
+  .pin__copy .buy,.scent__head,.sn li,.slam,
+  .pin__copy .lede,.pin__copy .price{opacity:1}
+
+  /* the phone's own reveal: it fires on entering view, not on track progress */
+  .m-rise{opacity:0;transform:translateY(18px);
+    transition:opacity .7s var(--ease),transform .8s cubic-bezier(.22,.61,.36,1)}
+  .m-rise.in{opacity:1;transform:none}
+}
+@media (max-width:900px) and (prefers-reduced-motion:reduce){
+  .m-rise{opacity:1;transform:none;transition:none}
+}
+
+/* ==================================================== REDUCED MOTION */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;transition-delay:0s !important}
+  .rise,.stg>*{opacity:1 !important;transform:none !important}
+  .notes li{opacity:1 !important;transform:none !important}
+  .env__video{display:none}
+  .mote{display:none}
+}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused !important}
+</style>
+
+<noscript><style>
+/* ===================================================== NO JAVASCRIPT
+   Every reveal on this page is a clamp() on a scroll-progress custom property, and those
+   properties are published by script. With scripting off nothing raises them, so the page
+   renders as an empty black column. These rules resolve every gated element to its final
+   state and let the pinned tracks fall into normal flow — the same end state the page
+   already reaches for prefers-reduced-motion, minus the scrubbing.
+   Scoped to <noscript>, so it cannot affect the scripted path. */
+
+/* the hero stops pinning and its four caption bands stack as ordinary blocks */
+.hero{height:auto}
+.stage{position:relative;height:auto;min-height:0}
+.stage__media,.ring,.chev{display:none}
+.bands{position:relative;pointer-events:auto}
+.band{position:relative;inset:auto;opacity:1;padding:9vh var(--gut)}
+.band__inner,.band__col{position:static;max-width:none;text-align:left;justify-self:start;transform:none}
+.band::before,.band--split::after{opacity:.28}
+.e-blur .soft{display:none}
+.e-blur .sharp,.e-depth,.e-drift .w{opacity:1;transform:none;filter:none}
+
+/* pinned tracks fall into flow */
+.track,.track--scent,.track--guar,.loud-sec{height:auto}
+.pin,.pin--scent,.pin--guar{position:static;height:auto;--fh:auto;padding:8vh 0}
+.loud__film{position:static;height:auto;aspect-ratio:16/9}
+.loud,.scent__ui,.guar__ui{position:relative;inset:auto}
+.rig,.rig__stack{transform:none}
+
+/* every scroll-gated element resolves to its final state */
+.stg>*,.rise,.rev,.m-rise,.beat,.slam,.fill,
+.close .buy,.pin__copy .buy,.pin__copy .lede,.pin__copy .price,
+.scent__head,.sn li,
+.guar__kick,.guar__h1,.guar__h2,.guar__p,.step,.steps__arrow{
+  opacity:1;transform:none;clip-path:none}
+.steps__fill{transform:scaleX(1)}
+.guar__sky{opacity:.5}
+.guar__vid,.scent__vid,.bed{opacity:1}
+
+/* the film never loads without script, so the posters carry those frames */
+.scent__vid,.guar__vid{background:#000 center/cover no-repeat}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- fixed environment: the brand's own crimson smoke -->
+<div class="env" id="env" aria-hidden="true">
+  <video class="env__video" id="envVideo" muted playsinline loop preload="none" tabindex="-1"></video>
+  <div class="env__wash"></div>
+  <div class="env__grain"></div>
+</div>
+<div class="motes" id="motes" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__brand" aria-label="Alpha Male home"><img class="nav__logo" src="assets/logo.png" alt="Alpha Male"></a>
+  <span class="ship"><svg class="ship__i" viewBox="0 0 26 16" fill="none" aria-hidden="true"><path d="M1 2.2h13.4v9.4H1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14.4 5.6h4.2l3.6 3.6v2.4h-7.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="6" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="18.2" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/></svg><span>Free shipping<i class="ship__over"> over</i> <b>$30</b></span></span>
+    <div class="nav__right" id="navMenu">
+    <a class="nav__link hide-s" href="#how">How it works</a>
+    <a class="nav__link hide-s" href="#scent">The scent</a>
+    <a class="nav__link hide-s" href="#proof">Reviews</a>
+    <a class="nav__link hide-s" href="#guarantee">Guarantee</a>
+    <a class="nav__link" href="#get" style="color:var(--accent)">Get a bottle</a>
+    </div>
+  <button class="nav__burger" id="navBurger" type="button"
+          aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="top"></div>
+
+<!-- ======================================================= HERO ===== -->
+<section class="hero" id="hero-sec" aria-label="Alpha Male">
+  <div class="stage" id="stage">
+
+    <div class="stage__media" id="stageMedia" inert>
+      <div class="poster" id="poster"></div>
+      <video id="hero" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+      <div class="scrim"></div>
+      <div class="vig"></div>
+    </div>
+
+    <div class="bands" id="bands">
+
+      <!-- BAND 1 -->
+      <div class="band band--left" data-a="0" data-b="0.20" data-ramp="0.030">
+        <div class="band__inner"><div class="band__col">
+          <p class="kicker"><svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg>Attraction cologne for men</p>
+          <h1 class="e-blur">
+            <span class="sr">Set the tone before you say a word. The right presence never needs an introduction.</span>
+            <span class="soft" aria-hidden="true">Set the tone before<br>you say a word.</span>
+            <span class="sharp" aria-hidden="true">Set the tone before<br>you say a word.</span>
+          </h1>
+          <p class="sub">The right presence never needs an introduction.</p>
+        </div></div>
+      </div>
+
+      <!-- BAND 2 -->
+      <div class="band band--right" data-a="0.24" data-b="0.46">
+        <div class="band__inner"><div class="band__col">
+          <h2 class="e-drift" data-split="word" data-spread="0.34">Walk in like you<br>belong there.</h2>
+          <p class="sub">A bold masculine fragrance made for men who carry themselves differently.</p>
+        </div></div>
+      </div>
+
+      <!-- BAND 3 -->
+      <div class="band band--left band--deep" data-a="0.50" data-b="0.70">
+        <div class="band__inner"><div class="band__col">
+          <h2 class="e-depth">Leave an impression<br>after you leave.</h2>
+          <p class="sub">Because confidence gets noticed. Presence gets remembered.</p>
+        </div></div>
+      </div>
+
+      <!-- BAND 4, the settle -->
+      <div class="band band--split" data-a="0.76" data-b="1" data-ramp="0.040">
+        <div class="band__inner">
+          <div class="band__col" style="grid-column:1;justify-self:start;text-align:left">
+            <img class="settle-logo" src="assets/wordmark.png" width="900" height="152" alt="Alpha Male">
+            <h2 class="settle-head">Make Your Presence Felt.</h2>
+            <p class="sub settle-sub">A bold pheromone cologne for men made to elevate your scent, confidence, and presence.</p>
+            <div class="settle-cta" style="margin-top:28px"><a class="btn" href="#get" data-jump>Get Alpha Male</a></div>
+          </div>
+          <div class="band__col" style="grid-column:3;justify-self:end;text-align:right">
+            <ol class="spec">
+              <li><span class="spec__step">First</span><span class="spec__line">They notice the scent</span></li>
+              <li><span class="spec__step">Then</span><span class="spec__line">They notice you</span></li>
+              <li><span class="spec__step">After</span><span class="spec__line">They remember both</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <svg class="ring" id="ring" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+    </svg>
+
+    <!-- phones / reduced motion get this instead -->
+    <div class="static-hero">
+      <p class="kicker" style="color:var(--accent)">Attraction cologne for men</p>
+      <h1>Set the tone before you say a word.</h1>
+      <p class="sub">The right presence never needs an introduction.</p>
+
+      <div class="sh__beat">
+        <h2>Walk in like you belong there.</h2>
+        <p class="sub">A bold masculine fragrance made for men who carry themselves differently.</p>
+      </div>
+      <div class="sh__beat">
+        <h2>Leave an impression after you leave.</h2>
+        <p class="sub">Because confidence gets noticed. Presence gets remembered.</p>
+      </div>
+      <div class="sh__beat sh__beat--settle">
+        <h2>Make your presence felt.</h2>
+        <p class="sub">A bold pheromone cologne for men made to elevate your scent, confidence, and presence.</p>
+        <ol class="sh__spec">
+          <li><span>First</span>They notice the scent</li>
+          <li><span>Then</span>They notice you</li>
+          <li><span>After</span>They remember both</li>
+        </ol>
+      </div>
+
+      <a class="btn" href="#get">Get Alpha Male</a>
+    </div>
+
+  </div>
+</section>
+
+<main id="main" tabindex="-1">
+
+<!-- ==================================================== PRODUCT ===== -->
+<section class="track" id="product">
+  <div class="pin">
+    <video class="bed" id="smokeBed" src="assets/smoke-bed.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <div class="bed__veil" aria-hidden="true"></div>
+
+    <div class="pin__inner">
+      <div class="pin__copy">
+        <h2 class="h"><span class="slam">Smelling good is expected.</span> <span class="slam">Being remembered isn&#8217;t.</span></h2>
+        <p class="lede">A masculine pheromone cologne created for the moments that matter &#8212; first impressions, closer conversations, and the confidence to see where things go.</p>
+        <div class="buy buy--compact" id="buyModule">
+    <div class="buy__opts" role="radiogroup" aria-label="Choose how many bottles">
+      <label class="opt">
+        <input class="opt__in" type="radio" name="qty-module" value="1">
+        <span class="opt__dot" aria-hidden="true"></span>
+        <span class="opt__q">1 bottle</span>
+        <span class="opt__p">$22.99</span>
+        <span class="opt__each">$22.99 each</span>
+        <span class="opt__u"></span>
+        <span class="opt__tag">Try it</span>
+      </label>
+      <label class="opt opt--best">
+        <span class="opt__flag">Best value</span>
+        <input class="opt__in" type="radio" name="qty-module" value="3" checked>
+        <span class="opt__dot" aria-hidden="true"></span>
+        <span class="opt__q">3 bottles</span>
+        <span class="opt__p">$54.99</span>
+        <span class="opt__each">$18.33 each</span>
+        <span class="opt__u"><s>$68.97</s> <b class="save">Save $13.98</b></span>
+        <span class="opt__tag opt__tag--rib">Most popular &#183; Maximum savings</span>
+      </label>
+      <label class="opt">
+        <input class="opt__in" type="radio" name="qty-module" value="2">
+        <span class="opt__dot" aria-hidden="true"></span>
+        <span class="opt__q">2 bottles</span>
+        <span class="opt__p">$39.99</span>
+        <span class="opt__each">$20.00 each</span>
+        <span class="opt__u"><s>$45.98</s> <b class="save">Save $5.99</b></span>
+        <span class="opt__tag">Great value</span>
+      </label>
+    </div>
+    
+    <a class="cta" href="#" data-cta><svg class="cta__i" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4.1" y="8.5" width="11.8" height="8.6" rx="1.4" stroke="currentColor" stroke-width="1.7"/><path d="M7 8.5V6.3a3 3 0 016 0v2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span class="cta__t">Get Alpha Male now</span><svg class="cta__a" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M0 6h21M15.6 1l5.6 5-5.6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+
+      <div class="rig" id="rig">
+        <div class="rig__stack">
+          <img class="rig__unit" src="assets/prod-shot.webp" width="860" height="1382"
+               alt="The Alpha Male 10ml roll-on bottle beside its box, roller ball visible">
+
+          <!-- the three things a shopper actually wants to inspect -->
+          <div class="spots" id="spots">
+            <button class="spot" type="button" style="--sx:72.1%;--sy:11.2%"
+                    aria-expanded="false" aria-controls="spot-1">
+              <span class="spot__dot" aria-hidden="true"></span>
+              <span class="sr">What the applicator is</span>
+            </button>
+            <span class="spot__note" id="spot-1" role="tooltip">
+              <b>Precision roller</b>Apply to wrists, neck and behind ears. No mess. No waste.
+            </span>
+
+  <button class="spot" type="button" style="--sx:72.1%;--sy:77.5%"
+                    aria-expanded="false" aria-controls="spot-3">
+              <span class="spot__dot" aria-hidden="true"></span>
+              <span class="sr">How much is in the bottle</span>
+            </button>
+            <span class="spot__note" id="spot-3" role="tooltip">
+              <b>Concentrated oil</b>Four pheromones: androstenol, androsterone, androstenone and androstadienone.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ======================================================== HOW ===== -->
+<section class="sec loud-sec" id="how">
+  <figure class="loud__film">
+    <video class="fill" id="coupleLoop" src="assets/couple-loop.mp4" poster="assets/couple-poster.jpg"
+           muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <span class="loud__foot" aria-hidden="true"></span>
+
+    <div class="loud">
+      <div class="loud__copy">
+        <h2 class="h">So what makes Alpha Male different?</h2>
+        <p class="formula">
+          <span>Premium fragrance</span><i aria-hidden="true">+</i><span>Pheromones</span><i aria-hidden="true">+</i><span>Roll-on application</span>
+        </p>
+      </div>
+
+      <ol class="beats">
+        <li class="beat"><span class="beat__n">01</span><h3>Smell unforgettable</h3><p>A sophisticated masculine fragrance designed to smell refined, confident and unmistakably masculine &#8212; from the first impression to the last.</p></li>
+        <li class="beat"><span class="beat__n">02</span><h3>Turn up your natural appeal</h3><p>Pheromone-infused to complement what you already bring &#8212; your presence, your confidence, your chemistry.</p></li>
+        <li class="beat"><span class="beat__n">03</span><h3>Made for closer</h3><p>Roll it directly onto your pulse points, keeping the fragrance close to your skin &#8212; right where personal space starts disappearing.</p></li>
+      </ol>
+    </div>
+  </figure>
+</section>
+
+<hr class="div">
+
+<!-- ====================================================== SCENT ===== -->
+<section class="track track--scent" id="scent">
+  <div class="pin pin--scent">
+    <video class="scent__vid" id="scentScrub" poster="assets/scent-poster.jpg"
+           muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <div class="scent__veil" aria-hidden="true"></div>
+
+    <div class="scent__ui">
+      <p class="eyebrow scent__brow"><svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg>The scent</p>
+      <h2 class="h scent__head">What does confidence smell like?</h2>
+
+      <div class="scent__cols">
+        <ol class="sn sn--l">
+          <li><span class="sn__k">Opening &#8212; the first impression</span><span class="sn__v">Bergamot + Pepper</span><span class="sn__d">Fresh. Sharp. Immediately noticeable.</span></li>
+          <li><span class="sn__k">Heart &#8212; the attraction</span><span class="sn__v">Lavender + Vetiver + Patchouli</span><span class="sn__d">Warm. Masculine. Sophisticated.</span></li>
+          <li><span class="sn__k">Base &#8212; what lingers</span><span class="sn__v">Ambroxan + Cedar + Labdanum</span><span class="sn__d">Deep. Smooth. Hard to forget.</span></li>
+        </ol>
+
+        <ol class="sn sn--r">
+          <li><span class="sn__k">Roll it on</span><span class="sn__d">A few smooth passes across your pulse points are all it takes.</span></li>
+          <li><span class="sn__k">Hit the right spots</span><span class="sn__d">Wrists. Neck. Behind the ears. Where warmth helps your scent come alive.</span></li>
+          <li><span class="sn__k">Go make an impression</span><span class="sn__d">Walk out smelling sharp, feeling confident, and ready to be remembered.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<!-- ================================================ WHAT IS IN IT ===== -->
+<!-- ====================================================== PROOF ===== -->
+<section class="sec" id="proof">
+  <div class="wrap">
+    <div class="stg">
+      <p class="eyebrow"><svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2"/></svg>Verified buyers</p>
+      <h2 class="h">They bought it.<br><span class="hit">Then things got interesting.</span></h2>
+      <p class="lede">The attention. The compliments. The unexpected reactions. Don&#8217;t take our word for it &#8212; read theirs.</p>
+    </div>
+
+    <div class="revs__bar">
+      <p class="revs__count">See what they&#8217;re saying</p>
+      <div class="revs__nav">
+        <button class="revs__btn" type="button" data-rev="-1" aria-label="Previous reviews">&#8592;</button>
+        <button class="revs__btn" type="button" data-rev="1" aria-label="More reviews">&#8594;</button>
+      </div>
+    </div>
+    <div class="revs" id="revs" tabindex="0" role="region" aria-label="Customer reviews, scrollable">
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">Its very effective and it works</h3>
+        <blockquote><p>I see a lot of reviews on how it feels on your skin, how it feels, how it smells, and so on and so on. Get to the point on how effective it is. My truth is, it works, I stepped out several times in different occasions and I got more attention than expected. Each time, everytime it worked. I showered, I put on a little whiskey reserve lotion and added this around my neck and dapped a little on my chest and the attention lit up.. it works guys..</p></blockquote>
+        <figcaption>Dewayne <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">Apply some and let it make contact to the skin to unleash pheromones</h3>
+        <blockquote><p>At first I didn't like it because I only smelled it directly from the roller (it was too much at once) but then I applied it to the skin and BOOM amazing smell!! I've only been wearing it for about a week and have gotten some compliments but most importantly I love the smell personally guess that's all that truly matters</p></blockquote>
+        <figcaption>Dustin Shedd <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">She's going to be all over you</h3>
+        <blockquote><p>Oh my gosh the sent of this d the first time I can say I would love to see what the women's going to say to me</p><p>May I add if your not a man who can get down with a type of fruity or sweet smell then it's not for you but if you ware million or anything light you will love this</p><p>Will be getting another one (in my DJ KAL voice)</p></blockquote>
+        <figcaption>derrick lynch <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">Rico con excelente fijador</h3>
+        <blockquote><p lang="es">Tiene un olor suave pero muy bueno. Me gusta ya que es de aceite y se concentra donde lo colocas. Tiene feromonas y a mi esposa me encanta.</p></blockquote>
+        <figcaption>Joshua Rodriguez <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">Works well</h3>
+        <blockquote><p>Always a great scent to allow my charm to shine a little bit more</p></blockquote>
+        <figcaption>Tom O'Conner <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">She loves the scent</h3>
+        <blockquote><p>She loves the scent when I wear it. It lasts quite a while. It is very versatile and rolls on easily. It is effective and makes me feel much more confident when I wear it.</p></blockquote>
+        <figcaption>Butterfliesin.space <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">Long-lasting, masculine scent that boosts confidence</h3>
+        <blockquote><p>Really impressed with this cologne. It has a strong, masculine scent that lasts for hours without being overwhelming. The roll-on format is super convenient for travel. It definitely adds confidence and presence. Great quality.</p></blockquote>
+        <figcaption>Nataliia <span>Verified Purchase</span></figcaption>
+      </figure>
+
+      <figure class="rev">
+        <div class="rev__stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h3 class="rev__t">Lady&#8217;s love this stuff</h3>
+        <blockquote><p>This is certainly effective&#8230; my girl can&#8217;t keep her head off my chest. She knows somethings up, just not exactly what! Lol&#8230;</p></blockquote>
+        <figcaption>Doug <span>Verified Purchase</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="track track--guar" id="guarantee">
+  <div class="pin pin--guar">
+    <div class="guar__sky" aria-hidden="true">
+      <video class="guar__vid" id="guarLoop" muted loop playsinline
+             preload="none" aria-hidden="true" tabindex="-1"></video>
+    </div>
+    <div class="guar__scrim" aria-hidden="true"></div>
+    <div class="guar__veil" aria-hidden="true"></div>
+
+    <div class="guar__ui">
+      <div class="guar__in">
+        <p class="guar__kick"><svg class="guar__chev" viewBox="0 0 20 10" fill="none" aria-hidden="true"><path d="M1 1l4 4-4 4M9 1l4 4-4 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The Alpha Male promise</p>
+
+        <h2 class="guar__h"><span class="guar__h1">Not feeling it?</span><span class="guar__h2">We can handle rejection.</span></h2>
+
+        <p class="guar__p">If Alpha Male isn&#8217;t for you &#8212; for any reason &#8212; just tell us.<br>
+          We&#8217;ll happily refund your purchase.<br>
+          No convincing. No awkward conversation. No hard feelings.</p>
+
+        <div class="steps">
+          <div class="steps__rail" aria-hidden="true"><span class="steps__fill"></span></div>
+          <ol class="steps__row">
+            <li class="step"><b>Don&#8217;t love it.</b><em>Any reason</em></li>
+            <li class="steps__arrow" aria-hidden="true"><svg viewBox="0 0 22 10" fill="none"><path d="M0 5h18M13.4 1l4.6 4-4.6 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+            <li class="step"><b>Tell us.</b><em>No hassle</em></li>
+            <li class="steps__arrow" aria-hidden="true"><svg viewBox="0 0 22 10" fill="none"><path d="M0 5h18M13.4 1l4.6 4-4.6 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+            <li class="step"><b>Get refunded.</b><em>No hard feelings</em></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== CLOSE ===== -->
+<section class="close" id="get">
+  <div class="stg">
+    <h2>You&#8217;ve read enough.<br><span class="hit">Now see what happens.</span></h2>
+    <p class="sub">Alpha Male was made for the nights you want to show up confident, smell unforgettable, and leave an impression. <b class="sub__hit">Choose your bottle and make your move.</b></p>
+  </div>
+
+  <div class="buy" id="buyClose">
+    <div class="buy__opts" role="radiogroup" aria-label="Choose how many bottles">
+      <label class="opt">
+        <input class="opt__in" type="radio" name="qty-close" value="1">
+        <span class="opt__dot" aria-hidden="true"></span>
+        <span class="opt__q">1 bottle</span>
+        <span class="opt__p">$22.99</span>
+        <span class="opt__each">$22.99 each</span>
+        <span class="opt__u"></span>
+        <span class="opt__tag">Try it</span>
+      </label>
+      <label class="opt opt--best">
+        <span class="opt__flag">Best value</span>
+        <input class="opt__in" type="radio" name="qty-close" value="3" checked>
+        <span class="opt__dot" aria-hidden="true"></span>
+        <span class="opt__q">3 bottles</span>
+        <span class="opt__p">$54.99</span>
+        <span class="opt__each">$18.33 each</span>
+        <span class="opt__u"><s>$68.97</s> <b class="save">Save $13.98</b></span>
+        <span class="opt__tag opt__tag--rib">Most popular &#183; Maximum savings</span>
+      </label>
+      <label class="opt">
+        <input class="opt__in" type="radio" name="qty-close" value="2">
+        <span class="opt__dot" aria-hidden="true"></span>
+        <span class="opt__q">2 bottles</span>
+        <span class="opt__p">$39.99</span>
+        <span class="opt__each">$20.00 each</span>
+        <span class="opt__u"><s>$45.98</s> <b class="save">Save $5.99</b></span>
+        <span class="opt__tag">Great value</span>
+      </label>
+    </div>
+    <ul class="trust">
+      <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 1.7 3.3 4.4v4.9c0 4 2.8 7.1 6.7 8.5 3.9-1.4 6.7-4.5 6.7-8.5V4.4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M6.9 9.9l2.3 2.3 4.1-4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>365-day</b>Money-back guarantee</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4.1" y="8.5" width="11.8" height="8.6" rx="1.4" stroke="currentColor" stroke-width="1.4"/><path d="M7 8.5V6.3a3 3 0 016 0v2.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span><b>Secure</b>Checkout</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M1.6 4.9h9.6v8.6H1.6z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11.2 7.9h3.1l3.1 3.2v2.4h-6.2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="5.6" cy="15.4" r="1.7" stroke="currentColor" stroke-width="1.4"/><circle cx="14.2" cy="15.4" r="1.7" stroke="currentColor" stroke-width="1.4"/></svg><span><b>Fast</b>Shipping</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.4" stroke="currentColor" stroke-width="1.4"/><path d="M6.6 10.1l2.3 2.3 4.5-4.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Satisfaction</b>Guaranteed</span></li>
+    </ul>
+    <a class="cta" href="#" data-cta><svg class="cta__i" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4.1" y="8.5" width="11.8" height="8.6" rx="1.4" stroke="currentColor" stroke-width="1.7"/><path d="M7 8.5V6.3a3 3 0 016 0v2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span class="cta__t">Get Alpha Male now</span><svg class="cta__a" viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M0 6h21M15.6 1l5.6 5-5.6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p class="buy__join"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.6" stroke="currentColor" stroke-width="1.3"/><path d="M6.7 10.1l2.2 2.2 4.4-4.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Join <b>10,000+</b> men who chose confidence.</span></p>
+    <p class="buy__help">Questions? <a class="buy__mail" href="mailto:info@alphamale.one">Contact our support team.</a> We&#8217;re here for you.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <img src="assets/logo.png" alt="Alpha Male">
+    <div class="foot__links foot__links--with-ship">
+      <span class="ship ship--foot"><svg class="ship__i" viewBox="0 0 26 16" fill="none" aria-hidden="true"><path d="M1 2.2h13.4v9.4H1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14.4 5.6h4.2l3.6 3.6v2.4h-7.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="6" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="18.2" cy="13" r="2" stroke="currentColor" stroke-width="1.5"/></svg><span>Free shipping<i class="ship__over"> over</i> <b>$30</b></span></span>
+      <a href="#how">How it works</a>
+      <a href="#scent">The scent</a>
+      <a href="#proof">Reviews</a>
+      <a href="#guarantee">Guarantee</a>
+      <a href="mailto:info@alphamale.one">info@alphamale.one</a>
+    </div>
+  </div>
+  <p class="fine">
+    Alpha Male, 8030 La Mesa Blvd. #195, La Mesa, CA 91942. Attraction cologne for men,
+    10 mL / 0.34 oz roll-on oil. Made in the USA. Never tested on animals.
+    Ingredients: dipropylene glycol, fragrance, human pheromones (1 mg): androstenol,
+    androsterone, androstenone, androstadienone.
+    For external use on skin only. Avoid contact with eyes. May stain some clothing.
+    Discontinue use if irritation occurs. Keep out of reach of children.
+    Individual results vary. This product is a fragrance and is not intended to diagnose,
+    treat, cure or prevent any condition.
+  </p>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ==========================================================================
+   Store URL. See README.md for how these are wired.
+   Put your store URL between the quotes. Every "Get a bottle" button and all
+   three price tiers will point at it immediately. Leave it empty and the
+   buttons say the store is not open yet, rather than silently doing nothing.
+   You can also give each pack its own checkout link in BUY_LINKS below.
+   ========================================================================== */
+var SMOKE_SRC = 'assets/smoke-loop.mp4';   /* one literal: the build inlines it once */
+
+var BUY_URL   = '';
+var BUY_LINKS = { '1': '', '2': '', '3': '' };   /* optional per-pack links */
+var SUPPORT_EMAIL = 'info@alphamale.one';        /* the address already shown in the footer */
+
+(function wireBuying(){
+  var pick = function(n){ return (BUY_LINKS[n] || BUY_URL || ''); };
+  var live = !!(BUY_URL || BUY_LINKS['1'] || BUY_LINKS['2'] || BUY_LINKS['3']);
+
+  /* Both buy boxes behave identically: the radio is the source of truth, the card only
+     reflects it, and the CTA reads it at click time rather than caching a URL. */
+  document.querySelectorAll('.buy').forEach(function(box){
+    var ins  = [].slice.call(box.querySelectorAll('.opt__in'));
+    var cta  = box.querySelector('.cta');
+
+    function sync(){
+      ins.forEach(function(i){
+        var card = i.parentNode;
+        card.classList.toggle('is-sel', i.checked);
+      });
+      var chosen = box.querySelector('.opt__in:checked');
+      var url = chosen ? pick(chosen.value) : '';
+      if (!cta) return;
+      if (url) { cta.href = url; cta.removeAttribute('aria-disabled'); }
+      else { cta.href = '#'; cta.setAttribute('aria-disabled', 'true'); }
+    }
+
+    ins.forEach(function(i){ i.addEventListener('change', sync); });
+    if (cta) cta.addEventListener('click', function(e){
+      if (cta.getAttribute('aria-disabled') === 'true') e.preventDefault();
+    });
+    sync();
+  });
+
+  /* anchors marked data-jump stay in-page: they scroll to the offer rather than leaving */
+  document.querySelectorAll('a[href="#get"], #buy').forEach(function(a){
+    if (BUY_URL && !a.hasAttribute('data-jump')) a.href = BUY_URL;
+  });
+
+  document.querySelectorAll('.buy__mail').forEach(function(a){
+    if (SUPPORT_EMAIL) a.href = 'mailto:' + SUPPORT_EMAIL;
+  });
+})();
+
+
+/* ------------------------------------------------ reviews that open
+   Measured after fonts settle: a control is only added to a card that is really hiding
+   something, so a short review does not get a "read more" that reveals nothing. */
+(function expandableReviews(){
+  function build(){
+    document.querySelectorAll('.rev').forEach(function(fig, i){
+      if (fig.dataset.exp) return;
+      var q = fig.querySelector('blockquote');
+      if (!q || q.scrollHeight - q.clientHeight < 8) return;
+      fig.dataset.exp = '1';
+      fig.classList.add('rev--clip');
+      if (!q.id) q.id = 'revq' + i;
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'rev__more';
+      b.textContent = 'Read more';
+      b.setAttribute('aria-expanded', 'false');
+      b.setAttribute('aria-controls', q.id);
+      q.parentNode.insertBefore(b, q.nextSibling);
+      b.addEventListener('click', function(){
+        var open = !fig.classList.contains('open');
+        if (open) fig.style.setProperty('--full', q.scrollHeight + 'px');
+        fig.classList.toggle('open', open);
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+        b.textContent = open ? 'Show less' : 'Read more';
+      });
+    });
+  }
+  /* One collapsed height for the row, taken from the tallest card once the controls are
+     in place. Set in CSS it would have to be a guess; measured it is exact, and a card
+     that opens still grows past it on its own. */
+  function level(){
+    var row = document.getElementById('revs');
+    if (!row) return;
+    row.style.removeProperty('--rev-h');
+    var tallest = 0;
+    row.querySelectorAll('.rev').forEach(function(f){
+      if (f.classList.contains('open')) return;
+      tallest = Math.max(tallest, f.getBoundingClientRect().height);
+    });
+    if (tallest) row.style.setProperty('--rev-h', Math.ceil(tallest) + 'px');
+  }
+  function boot(){ build(); level(); }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(boot);
+  else window.addEventListener('load', boot);
+  var t;
+  window.addEventListener('resize', function(){
+    clearTimeout(t);
+    t = setTimeout(function(){
+      document.querySelectorAll('.rev.open').forEach(function(f){
+        var q = f.querySelector('blockquote');
+        if (q) f.style.setProperty('--full', q.scrollHeight + 'px');
+      });
+      level();
+    }, 140);
+  });
+})();
+
+
+
+
+
+/* ------------------------------------------------ guarantee scroll progress
+   One value on the section drives everything: the camera transform and every line of the
+   copy are clamp() expressions on --sp. Same publisher the scent film uses, minus the video. */
+/* The same file is already playing on the fixed environment layer; running both at once
+   would show the identical footage twice at two scales and read as a double exposure. The
+   ambient layer ducks while this section is on screen. Its source is read off that element
+   rather than written as a path, so the build does not inline a second copy. */
+(function guaranteeLoop(){
+  var sec = document.getElementById('guarantee'), v = document.getElementById('guarLoop'),
+      src = document.getElementById('envVideo') || {};
+  if (!sec || !v) return;
+  var started = false;
+  function begin(){
+    if (started) return;
+    /* prefer the ambient element's resolved source (already warm in cache on desktop), but
+       fall back to the shared literal — on a phone the ambient layer is never loaded */
+    var url = src.currentSrc || src.getAttribute('src') || SMOKE_SRC;
+    if (!url) return;
+    started = true;
+    v.src = url;
+    v.addEventListener('playing', function(){ v.classList.add('on'); }, {once:true});
+    v.load();
+  }
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      document.body.classList.toggle('guar-lock', e.isIntersecting);
+      if (e.isIntersecting){ begin(); var q = v.play(); if (q && q.catch) q.catch(function(){}); }
+      else if (started) v.pause();
+    });
+  }, {rootMargin:'300px 0px'}).observe(sec);
+  document.addEventListener('visibilitychange', function(){
+    if (!started) return;
+    if (document.hidden) v.pause();
+    else { var q = v.play(); if (q && q.catch) q.catch(function(){}); }
+  });
+})();
+
+(function guaranteeProgress(){
+  var sec = document.getElementById('guarantee');
+  if (!sec) return;
+  var raf = 0;
+  function step(){
+    raf = 0;
+    var r = sec.getBoundingClientRect();
+    var span = Math.max(1, sec.offsetHeight - window.innerHeight);
+    var p = -r.top / span;
+    sec.style.setProperty('--sp', (p < 0 ? 0 : p > 1 ? 1 : p).toFixed(4));
+  }
+  function kick(){ if (!raf) raf = requestAnimationFrame(step); }
+  window.addEventListener('scroll', kick, {passive:true});
+  window.addEventListener('resize', kick);
+  step();
+})();
+
+/* ------------------------------------------------------ small helpers */
+var clamp=function(v,lo,hi){return Math.min(hi,Math.max(lo,v));};
+var smoothstep=function(p,e0,e1){var t=clamp((p-e0)/(e1-e0),0,1);return t*t*(3-2*t);};
+function rng(seed){var s=seed>>>0;return function(){s=(s*1664525+1013904223)>>>0;return s/4294967296;};}
+
+var stage=document.getElementById('stage');
+var video=document.getElementById('hero');
+var poster=document.getElementById('poster');
+var ring=document.getElementById('ring');
+var heroSec=document.getElementById('hero-sec');
+var nav=document.getElementById('nav');
+
+var VIDEO_URL='assets/hero-scrub.mp4';
+var VIDEO_BYTES=2695156;
+
+/* ------------------------------------------------- split band headlines */
+var bandEls=[].slice.call(document.querySelectorAll('.band'));
+var bands=bandEls.map(function(el,i){
+  return {el:el,a:parseFloat(el.dataset.a),b:parseFloat(el.dataset.b),
+          ramp:el.dataset.ramp?parseFloat(el.dataset.ramp):0,
+          op:-1,k:-1};
+});
+
+(function splitAll(){
+  var rand=rng(20260816);
+  document.querySelectorAll('[data-split="word"]').forEach(function(el){
+    var spread=parseFloat(el.dataset.spread||'0.3');
+    var html=el.innerHTML;
+    var text=el.textContent;
+    var sr=document.createElement('span');sr.className='sr';sr.textContent=text;
+    var vis=document.createElement('span');vis.setAttribute('aria-hidden','true');
+    vis.innerHTML=html;
+    // wrap each top-level text word
+    var words=[];
+    (function walk(node){
+      [].slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var parts=n.textContent.split(/(\s+)/).filter(function(s){return s.length;});
+          var frag=document.createDocumentFragment();
+          parts.forEach(function(p){
+            if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(p));return;}
+            var w=document.createElement('span');w.className='w';w.textContent=p;
+            words.push(w);frag.appendChild(w);
+          });
+          node.replaceChild(frag,n);
+        }else if(n.nodeType===1&&!n.classList.contains('w')){walk(n);}
+      });
+    })(vis);
+    words.forEach(function(w,i){
+      var th=(words.length>1?(i/(words.length-1)):0)*spread+rand()*0.05;
+      w.style.setProperty('--th',th.toFixed(3));
+    });
+    el.innerHTML='';el.appendChild(sr);el.appendChild(vis);
+  });
+})();
+
+/* ------------------------------------------------------- the drive loop */
+var target=0,shown=0,rafId=null,lastTick=0,heroOnScreen=true,scrubOn=false;
+var loadK=0,loadStart=0;
+
+function heroProgress(){
+  var r=heroSec.getBoundingClientRect();
+  var range=heroSec.offsetHeight-window.innerHeight;
+  if(range<=0)return 0;
+  return clamp(-r.top/range,0,1);
+}
+
+/* seek gating, deadlock safe */
+var seekBusy=false,pendingTime=null;
+function requestSeek(t){
+  if(!video.duration)return;
+  if(seekBusy){pendingTime=t;return;}
+  seekBusy=true;
+  try{video.currentTime=t;}catch(e){seekBusy=false;}
+}
+video.addEventListener('seeked',function(){
+  seekBusy=false;
+  if(pendingTime!==null){var t=pendingTime;pendingTime=null;requestSeek(t);}
+});
+video.addEventListener('error',function(){seekBusy=false;pendingTime=null;failVideo();});
+
+function tick(now){
+  var dt=Math.min(100,now-(lastTick||now));lastTick=now;
+  var k=0.16;
+  shown+=(target-shown)*(1-Math.pow(1-k,dt/16.667));
+  var done=Math.abs(target-shown)<0.0005;
+  if(done){shown=target;}
+  if(loadStart&&loadK<1){
+    loadK=clamp((now-loadStart)/900,0,1);
+  }
+  if(video.duration)requestSeek(shown*video.duration);
+  updateCaptions(shown);
+  if(done&&loadK>=1){rafId=null;lastTick=0;}
+  else{rafId=requestAnimationFrame(tick);}
+}
+function onScroll(){
+  target=heroProgress();
+  if(rafId===null&&heroOnScreen&&scrubOn)rafId=requestAnimationFrame(tick);
+}
+
+/* -------------------------------------------- captions, delta gated */
+function updateCaptions(p){
+  for(var i=0;i<bands.length;i++){
+    var b=bands[i];
+    var f=Math.min(0.02,(b.b-b.a)/3);
+    var inRamp=(i===0)?0:f;
+    var outRamp=(i===bands.length-1)?0:f;
+    var op=smoothstep(p,b.a,b.a+inRamp)*(1-smoothstep(p,b.b-outRamp,b.b));
+    if(i===0)op=(p<=b.b-outRamp)?1:op;
+    var ramp=b.ramp||Math.min(0.025,(b.b-b.a)*0.35);
+    var kk=clamp((p-b.a)/ramp,0,1);
+    if(i===0)kk=Math.max(kk,loadK);
+    if(Math.abs(op-b.op)>0.004){b.op=op;b.el.style.opacity=op.toFixed(3);}
+    if(Math.abs(kk-b.k)>0.008){
+      b.k=kk;
+      b.el.style.setProperty('--k',kk.toFixed(3));
+      if(b.el.classList.contains('band--split')){
+        /* logo first, then headline, then sub + the three beats, then the button */
+        b.el.style.setProperty('--kl',clamp(kk*2.0,0,1).toFixed(3));
+        b.el.style.setProperty('--kh',clamp((kk-0.30)*2.6,0,1).toFixed(3));
+        b.el.style.setProperty('--ks',clamp((kk-0.55)*2.6,0,1).toFixed(3));
+        b.el.style.setProperty('--kb',clamp((kk-0.72)*3.4,0,1).toFixed(3));
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------ blob load with ring */
+var started=false;
+function startBlobFetch(){
+  if(started)return;started=true;
+  loadHeroBlob().catch(failVideo);
+}
+function initHeroOnce(){
+  if(initHeroOnce.done)return;initHeroOnce.done=true;
+  poster.style.backgroundImage="url('assets/hero-poster.jpg')";
+  var img=new Image();
+  img.onload=function(){poster.classList.add('in');startBlobFetch();};
+  img.onerror=startBlobFetch;
+  img.src='assets/hero-poster.jpg';
+  setTimeout(startBlobFetch,4000);
+  loadStart=performance.now();
+  if(rafId===null)rafId=requestAnimationFrame(tick);
+}
+function loadHeroBlob(){
+  /* A data: URI is already in the document — there is nothing to stream, and a strict
+     connect-src (an artifact/CSP host) refuses to fetch it at all, which would drop the
+     whole scrub to the static hero. Hand it straight to the element instead. */
+  if(VIDEO_URL.slice(0,5)==='data:'){
+    return new Promise(function(resolve,reject){
+      video.addEventListener('canplay',function(){
+        ring.style.setProperty('--ld',0);
+        requestSeek(heroProgress()*video.duration);
+        stage.classList.add('video-ready');
+        resolve();
+      },{once:true});
+      video.addEventListener('error',function(){reject(new Error('data uri decode failed'));},{once:true});
+      video.src=VIDEO_URL;
+      video.load();
+    });
+  }
+  var ctrl=new AbortController();
+  var watchdog=setTimeout(function(){ctrl.abort();},20000);
+  var opts={signal:ctrl.signal};
+  try{opts.priority='low';}catch(e){}
+  return fetch(VIDEO_URL,opts).then(function(res){
+    if(!res.ok||!res.body)throw new Error('bad response');
+    var total=Number(res.headers.get('Content-Length'))||VIDEO_BYTES;
+    var reader=res.body.getReader();
+    var chunks=[],got=0,lastRing=0;
+    function pump(){
+      return reader.read().then(function(r){
+        if(r.done)return;
+        clearTimeout(watchdog);
+        watchdog=setTimeout(function(){ctrl.abort();},20000);
+        chunks.push(r.value);got+=r.value.length;
+        var frac=Math.min(1,got/total),now=performance.now();
+        if(now-lastRing>100||frac===1){
+          lastRing=now;
+          ring.style.setProperty('--ld',Math.round(126*(1-frac)));
+        }
+        return pump();
+      });
+    }
+    return pump().then(function(){
+      clearTimeout(watchdog);
+      ring.style.setProperty('--ld',0);
+      video.src=URL.createObjectURL(new Blob(chunks,{type:'video/mp4'}));
+      video.load();
+      video.addEventListener('canplay',function(){
+        requestSeek(heroProgress()*video.duration);
+        stage.classList.add('video-ready');
+      },{once:true});
+    });
+  });
+}
+function failVideo(){
+  if(failVideo.done)return;failVideo.done=true;
+  if(ring&&ring.parentNode){
+    var c=document.createElement('div');
+    c.className='chev';
+    c.innerHTML='<svg viewBox="0 0 22 34" fill="none" aria-hidden="true"><path d="M4 12l7 7 7-7" stroke="currentColor" stroke-width="2"/></svg>';
+    ring.parentNode.replaceChild(c,ring);
+  }
+  stage.classList.add('video-failed');
+}
+
+/* ------------------------------------------- the five static-hero gates */
+var GATES=[
+  '(max-width: 720px)',
+  '(orientation: portrait) and (max-width: 1024px)',
+  '(orientation: portrait) and (pointer: coarse)',
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+  '(prefers-reduced-motion: reduce)'
+];
+var MQLS=GATES.map(function(q){return matchMedia(q);});
+
+function enableScrub(){
+  if(scrubOn)return;scrubOn=true;
+  initHeroOnce();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  bands.forEach(function(b){b.op=-1;b.k=-1;});
+  unpinFinalStates();
+  updateCaptions(heroProgress());
+  onScroll();
+}
+function disableScrub(){
+  if(!scrubOn)return;scrubOn=false;
+  window.removeEventListener('scroll',onScroll);
+  if(rafId!==null){cancelAnimationFrame(rafId);rafId=null;}
+}
+function applyHeroMode(){
+  var hit=MQLS.some(function(m){return m.matches;});
+  if(hit)disableScrub();else enableScrub();
+}
+MQLS.forEach(function(m){
+  if(m.addEventListener)m.addEventListener('change',applyHeroMode);
+  else if(m.addListener)m.addListener(applyHeroMode);
+});
+
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      heroOnScreen=e.isIntersecting;
+      if(heroOnScreen&&scrubOn&&rafId===null)rafId=requestAnimationFrame(tick);
+    });
+  },{rootMargin:'120px'}).observe(heroSec);
+}
+
+/* ----------------------------------------------------- nav solid state */
+var navSolid=false;
+window.addEventListener('scroll',function(){
+  var s=window.scrollY>60;
+  if(s!==navSolid){navSolid=s;nav.classList.toggle('solid',s);}
+},{passive:true});
+
+/* ------------------------------------------- product track: pin + rig */
+(function(){
+  var track=document.getElementById('product'), rig=document.getElementById('rig'),
+      bed=document.getElementById('smokeBed');
+  if(!track||!rig) return;
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)');
+  var narrow=window.matchMedia('(max-width:880px)');
+  var tRaf=null, inView=false, mx=0, my=0, tmx=0, tmy=0, scale=1;
+
+  function publish(){
+    tRaf=null;
+    var r=track.getBoundingClientRect();
+    /* progress through the part of the track that actually scrolls past the pin */
+    var span=Math.max(1,r.height-window.innerHeight);
+    var t=Math.min(1,Math.max(0,-r.top/span));
+    track.style.setProperty('--t',t.toFixed(4));
+    /* ease the pointer rather than tracking it raw — raw pointer on a big element
+       reads twitchy, and the lag is what makes it feel like weight */
+    mx+=(tmx-mx)*0.12; my+=(tmy-my)*0.12;
+    rig.style.setProperty('--mx',mx.toFixed(4));
+    rig.style.setProperty('--my',my.toFixed(4));
+    rig.style.setProperty('--rs',(0.94+0.06*Math.min(1,t*3)).toFixed(4));
+    if(inView&&(Math.abs(tmx-mx)>0.001||Math.abs(tmy-my)>0.001)) kick();
+  }
+  function kick(){ if(tRaf===null) tRaf=requestAnimationFrame(publish); }
+
+  window.addEventListener('scroll',kick,{passive:true});
+  window.addEventListener('resize',kick);
+
+  if(!narrow.matches&&!reduce.matches){
+    rig.addEventListener('pointermove',function(e){
+      var b=rig.getBoundingClientRect();
+      tmx=((e.clientX-b.left)/b.width -0.5)*2;
+      tmy=((e.clientY-b.top )/b.height-0.5)*2;
+      rig.classList.add('is-live'); kick();
+    });
+    rig.addEventListener('pointerleave',function(){
+      tmx=0; tmy=0; rig.classList.remove('is-live'); kick();
+    });
+  }
+
+  /* ---- the scent film is SCRUBBED, not played: scroll drives currentTime ----
+     Same approach as the hero. The video is fetched as a Blob first, because seeking a
+     streaming <video> stalls on ranges the browser has not buffered, which shows up as a
+     scrub that sticks. Seeks are gated so they can never overlap, and the displayed time
+     is eased toward the target so a fast flick glides instead of stepping. */
+  (function(){
+    var sec=document.getElementById('scent'), v=document.getElementById('scentScrub');
+    if(!sec||!v) return;
+    var SRC='assets/scent-scrub.mp4';
+    var loaded=false, seeking=false, want=0, shown=0, raf=null, live=false;
+
+    function progress(){
+      var r=sec.getBoundingClientRect();
+      var span=Math.max(1, sec.offsetHeight - window.innerHeight);
+      return Math.min(1, Math.max(0, -r.top / span));
+    }
+    function step(){
+      raf=null;
+      if(!loaded || !v.duration) return;
+      var pr=progress();
+      sec.style.setProperty('--sp',pr.toFixed(4));
+      want=pr*v.duration;
+      shown += (want-shown)*0.18;
+      if(Math.abs(want-shown)<0.008) shown=want;
+      if(!seeking && Math.abs(v.currentTime-shown)>0.012){
+        seeking=true;
+        try{ v.currentTime=shown; }catch(e){ seeking=false; }
+      }
+      if(live && Math.abs(want-shown)>0.004) kick();
+    }
+    function kick(){ if(raf===null) raf=requestAnimationFrame(step); }
+    v.addEventListener('seeked',function(){ seeking=false; kick(); });
+
+    function load(){
+      if(loaded) return; loaded=true;
+      /* A data: URI is already in the document and a strict connect-src refuses to fetch
+         it, which would leave the scrub dead. Hand it straight to the element. */
+      if(SRC.slice(0,5)==='data:'){
+        v.src=SRC;
+        v.addEventListener('loadeddata',function(){ shown=progress()*(v.duration||1); kick(); },{once:true});
+        v.load(); return;
+      }
+      fetch(SRC).then(function(r){ return r.blob(); }).then(function(b){
+        v.src=URL.createObjectURL(b);
+        v.addEventListener('loadeddata',function(){ shown=progress()*(v.duration||1); kick(); },{once:true});
+        v.load();
+      }).catch(function(){ v.src=SRC; v.load(); });
+    }
+
+    window.addEventListener('scroll',kick,{passive:true});
+    window.addEventListener('resize',kick);
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){ live=e.isIntersecting; if(live){ load(); kick(); } });
+      },{rootMargin:'400px 0px'}).observe(sec);
+    } else { load(); }
+  })();
+
+  /* ---- the mechanism section publishes its own scroll progress ---- */
+  (function(){
+    var how=document.getElementById('how'); if(!how) return;
+    var raf=null;
+    function pub(){
+      raf=null;
+      var r=how.getBoundingClientRect();
+      var film=how.querySelector('.loud__film');
+      var fh=film?film.getBoundingClientRect().height:0;
+      /* Progress through the PINNED stretch: 0 the moment the frame locks, 1 when it
+         releases. Measuring against the viewport instead would run the whole reveal off
+         before the frame had even settled. */
+      var stick=(window.innerHeight-fh)/2;
+      var span=Math.max(1,how.offsetHeight-fh);
+      var p=(stick-r.top)/span;
+      how.style.setProperty('--p',Math.min(1,Math.max(0,p)).toFixed(4));
+    }
+    function kick(){ if(raf===null) raf=requestAnimationFrame(pub); }
+    window.addEventListener('scroll',kick,{passive:true});
+    window.addEventListener('resize',kick);
+    kick();
+
+    /* this section's own bed, on the same in-view-only rule as the product module's */
+    var bed2=document.getElementById('coupleLoop');
+    if(bed2&&'IntersectionObserver' in window){
+      new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){
+            if(bed2.preload!=='auto'){bed2.preload='auto';bed2.load();}
+            if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+              var q=bed2.play(); if(q&&q.catch)q.catch(function(){});
+            }
+          } else if(!bed2.paused){ bed2.pause(); }
+        });
+      },{rootMargin:'200px 0px'}).observe(how);
+    } else if(bed2){ bed2.preload='auto'; bed2.load(); }
+  })();
+
+  /* ---- the review row pages rather than free-scrolls ---- */
+  (function(){
+    var row=document.getElementById('revs'); if(!row) return;
+    var btns=[].slice.call(document.querySelectorAll('.revs__btn'));
+    function page(){ var c=row.querySelector('.rev');
+      return c ? c.getBoundingClientRect().width + 18 : row.clientWidth * .8; }
+    function sync(){
+      var max=row.scrollWidth-row.clientWidth-2;
+      btns.forEach(function(b){
+        var d=+b.dataset.rev;
+        b.disabled = (d<0 && row.scrollLeft<=2) || (d>0 && row.scrollLeft>=max);
+      });
+    }
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        var n=Math.max(1,Math.floor(row.clientWidth/page()));
+        row.scrollBy({left:+b.dataset.rev*page()*n,behavior:'smooth'});
+      });
+    });
+    row.addEventListener('scroll',sync,{passive:true});
+    window.addEventListener('resize',sync);
+    sync();
+  })();
+
+  /* ---- inspection points ---- */
+  (function(){
+    var host=document.getElementById('spots'); if(!host) return;
+    var pin=track.querySelector('.pin'), stack=rig.querySelector('.rig__stack');
+    var pairs=[].map.call(host.querySelectorAll('.spot'),function(btn){
+      return {btn:btn, note:document.getElementById(btn.getAttribute('aria-controls'))};
+    });
+    function place(p){
+      var pb=pin.getBoundingClientRect(), sb=stack.getBoundingClientRect(),
+          bb=p.btn.getBoundingClientRect(), nb=p.note.getBoundingClientRect();
+      var GAP=16;
+      /* put the card on whichever side of the dot has room inside the pinned frame,
+         then clamp — an inspection card that runs off the edge is worse than none */
+      var right=pb.right-(bb.right+GAP), left=bb.left-GAP-pb.left;
+      var x = (right>=nb.width || right>=left) ? (bb.right+GAP-sb.left)
+                                               : (bb.left-GAP-nb.width-sb.left);
+      x=Math.max(pb.left+12-sb.left, Math.min(x, pb.right-12-nb.width-sb.left));
+      var y=bb.top+bb.height/2-nb.height/2-sb.top;
+      y=Math.max(pb.top+12-sb.top, Math.min(y, pb.bottom-12-nb.height-sb.top));
+      p.note.style.setProperty('--nx',Math.round(x)+'px');
+      p.note.style.setProperty('--ny',Math.round(y)+'px');
+    }
+    function close(p){ p.note.classList.remove('is-open'); p.btn.setAttribute('aria-expanded','false'); }
+    function open(p){
+      pairs.forEach(function(q){ if(q!==p) close(q); });
+      p.note.classList.add('is-open'); p.btn.setAttribute('aria-expanded','true'); place(p);
+    }
+    pairs.forEach(function(p){
+      p.btn.addEventListener('click',function(e){
+        e.stopPropagation();
+        p.btn.getAttribute('aria-expanded')==='true' ? close(p) : open(p);
+      });
+      /* hover and keyboard focus both open it; touch is covered by click */
+      p.btn.addEventListener('pointerenter',function(e){ if(e.pointerType!=='touch') open(p); });
+      p.btn.addEventListener('focus',function(){ open(p); });
+      p.btn.addEventListener('blur',function(){ close(p); });
+      p.btn.addEventListener('pointerleave',function(e){ if(e.pointerType!=='touch'&&document.activeElement!==p.btn) close(p); });
+    });
+    document.addEventListener('click',function(){ pairs.forEach(close); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') pairs.forEach(close); });
+    window.addEventListener('resize',function(){ pairs.forEach(function(p){ if(p.note.classList.contains('is-open')) place(p); }); });
+    window.addEventListener('scroll',function(){ pairs.forEach(function(p){ if(p.note.classList.contains('is-open')) place(p); }); },{passive:true});
+  })();
+
+  /* the bed only decodes and runs while the module is actually on screen */
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        inView=e.isIntersecting;
+        if(!bed) return;
+        if(inView){
+          if(bed.preload!=='auto'){bed.preload='auto';bed.load();}
+          if(!reduce.matches){var p=bed.play();if(p&&p.catch)p.catch(function(){});}
+          kick();
+        } else if(!bed.paused){ bed.pause(); }
+      });
+    },{rootMargin:'200px 0px'}).observe(track);
+  } else if(bed){ bed.preload='auto'; bed.load(); }
+  kick();
+})();
+
+/* -------------------------------------------------- section entrances */
+var io=null;
+if('IntersectionObserver' in window){
+  io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      e.target.classList.add('in');
+      if(e.target.classList.contains('stg')){
+        setTimeout(function(){e.target.classList.add('done');},1400);
+      }
+      io.unobserve(e.target);
+    });
+  },{threshold:0.16,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.stg,.rise,.rev,.guar,.close .buy').forEach(function(el){io.observe(el);});
+}else{
+  document.querySelectorAll('.stg,.rise,.rev,.close .buy').forEach(function(el){el.classList.add('in');});
+}
+
+/* --------------------------------------------- phone reveal on arrival
+   On a phone the scroll-progress reveals are switched off in CSS, so these elements get the
+   page's ordinary enter-the-viewport treatment instead. Desktop is untouched. */
+(function mobileReveal(){
+  if (!window.matchMedia('(max-width:900px)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var sel = '#buyModule,#buyClose,.scent__head,.sn li,.pin__copy .lede,.slam,' +
+            '.guar__h,.guar__p,.steps__row,.loud__copy';
+  var els = [].slice.call(document.querySelectorAll(sel));
+  if (!els.length) return;
+  els.forEach(function(e, i){
+    e.classList.add('m-rise');
+    e.style.transitionDelay = Math.min(i % 4, 3) * 70 + 'ms';
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* ------------------------------------------------------------ the menu
+   Five links, a logo and a double-size shipping promise do not share a phone's header row,
+   so below 900px the links live in a panel. Closes on choosing a link, on Escape, and on a
+   tap outside — a menu that can only be closed by the button it was opened with is a trap. */
+(function navMenu(){
+  var nav = document.getElementById('nav'), btn = document.getElementById('navBurger'),
+      menu = document.getElementById('navMenu');
+  if (!nav || !btn || !menu) return;
+  function setOpen(v){
+    nav.classList.toggle('open', v);
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    setOpen(!nav.classList.contains('open'));
+  });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', function(e){
+    if (nav.classList.contains('open') && !nav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')){ setOpen(false); btn.focus(); }
+  });
+  window.matchMedia('(min-width:901px)').addEventListener('change', function(m){
+    if (m.matches) setOpen(false);
+  });
+})();
+
+/* ------------------------------------------------- environment layer */
+var env=document.getElementById('env');
+var envVideo=document.getElementById('envVideo');
+function startEnv(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  /* phones keep the wash and the grain but never download the loop:
+     it is decoration, and it is not worth a phone's bandwidth */
+  if(matchMedia('(max-width: 900px)').matches||matchMedia('(pointer: coarse)').matches)return;
+  if(startEnv.done)return;startEnv.done=true;
+  envVideo.src=SMOKE_SRC;
+  envVideo.load();
+  var p=envVideo.play();
+  if(p&&p.catch)p.catch(function(){});
+  envVideo.addEventListener('playing',function(){env.classList.add('on');},{once:true});
+}
+if('requestIdleCallback' in window)requestIdleCallback(startEnv,{timeout:2500});
+else setTimeout(startEnv,1600);
+
+/* ------------------------------------------------------------- motes */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var host=document.getElementById('motes');
+  var r=rng(776655);
+  for(var i=0;i<12;i++){
+    var m=document.createElement('div');
+    m.className='mote';
+    m.style.left=(r()*100).toFixed(2)+'%';
+    m.style.bottom='-4vh';
+    m.style.animationDelay=(-r()*22).toFixed(2)+'s';
+    m.style.animationDuration=(17+r()*13).toFixed(1)+'s';
+    m.style.opacity='0';
+    host.appendChild(m);
+  }
+  host.classList.add('on');
+})();
+
+/* --------------------------------------- the one interactive moment */
+
+
+/* ---------------------------------- reduced motion, live, both ways */
+function pinToFinalStates(){
+  document.querySelectorAll('.stg,.rise').forEach(function(el){el.classList.add('in','done');});
+  document.querySelectorAll('#notes li').forEach(function(li){li.classList.add('lit');});
+  if(window.__dropComplete)window.__dropComplete();
+  bands.forEach(function(b){b.el.style.opacity='';b.el.style.setProperty('--k','1');});
+  env.classList.remove('on');
+  if(rafId!==null){cancelAnimationFrame(rafId);rafId=null;}
+}
+function unpinFinalStates(){
+  bands.forEach(function(b){b.el.style.removeProperty('--k');});
+}
+matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',function(e){
+  if(e.matches){disableScrub();pinToFinalStates();}
+  else{applyHeroMode();startEnv();}
+});
+
+/* ---------------------------------------- pause everything off-tab */
+document.addEventListener('visibilitychange',function(){
+  var hidden=document.hidden;
+  document.body.classList.toggle('paused',hidden);
+  if(envVideo.src){ if(hidden)envVideo.pause(); else {var q=envVideo.play(); if(q&&q.catch)q.catch(function(){});} }
+});
+
+/* ------------------------------------------------------------- boot */
+applyHeroMode();
+
+})();
+</script>
+</body>
+</html>

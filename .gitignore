@@ -1,0 +1,21 @@
+# Build + review artifacts — regenerated, never edited by hand
+review/
+site/preview.html
+site/mock.html
+
+# Tooling that is not part of the site
+_skill/
+10k-websites-skill.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Press-ready label artwork. You asked for the source assets and they are included —
+# except this one. A print-resolution label file in a public repo is what a counterfeiter
+# needs, and a public git history cannot be un-published. Delete this line to include it.
+assets-in/*FOR PRINT.pdf
